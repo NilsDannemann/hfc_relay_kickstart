@@ -1,0 +1,19 @@
+@import 'pod-styles.scss';
+
+@import 'node_modules/hfc-relay/hfc-relay.scss';
+@import 'config.scss';
+
+
+body{
+  @include container();
+}
+
+.container{
+  @include container();
+  @include flexbox();
+}
+.box {
+  @include column(1/3, $gutter: true);
+  padding: $whitespace;
+  border: $border;
+}
