@@ -1,0 +1,40 @@
+&{
+  @include flexbox();
+
+  .teaser-container {
+    @include column(1/1);
+    margin-top: $whitespace;
+    @include respond-above(l) {@include column(1/2, $gutter: $whitespace);}
+  }
+  .teaser-title {
+    @include flexbox($justify: flex-start, $align: center, $wrap: no-wrap);
+    background: $color-brand;
+    color: #fff;
+    margin-bottom: 0;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:before {
+      @include flexbox($justify: center, $align: center);
+      flex: 0 0 auto;
+      content: '\f105';
+      font-family: 'FontAwesome';
+      height: ($whitespace*2);
+      width: ($whitespace*2);
+      background: darken($color-brand, 5%);
+      margin-right: ($whitespace*0.5);
+      border-top-left-radius: $border-radius;
+    }
+  }
+  .teaser-image{
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    overflow: hidden;
+  }
+  .teaser-content{
+    padding-top: ($whitespace*0.5);
+  }
+}

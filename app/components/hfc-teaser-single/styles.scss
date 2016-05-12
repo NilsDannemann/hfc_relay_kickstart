@@ -1,0 +1,41 @@
+&{
+  @include flexbox();
+
+  .teaser-container {
+    @include flexbox($direction: row);
+    @include column(1/1);
+    margin-top: $whitespace;
+  }
+  .teaser-title {
+    @include flexbox($justify: flex-start, $align: center, $wrap: no-wrap);
+    background: $color-brand;
+    color: #fff;
+    margin-bottom: ($whitespace*0.5);
+    border-radius: $border-radius;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:before {
+      @include flexbox($justify: center, $align: center);
+      flex: 0 0 auto;
+      content: '\f105';
+      font-family: 'FontAwesome';
+      height: ($whitespace*2);
+      width: ($whitespace*2);
+      background: darken($color-brand, 5%);
+      margin-right: ($whitespace*0.5);
+      border-top-left-radius: $border-radius;
+    }
+  }
+  .teaser-image{
+    @include column(1/1);
+    @include respond-above(l) {@include column(1/3, $gutter: $whitespace);}
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+  .teaser-content{
+    @include column(1/1);
+    @include respond-above(l) {@include column(2/3, $gutter: $whitespace);}
+  }
+}

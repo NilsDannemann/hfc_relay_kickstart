@@ -1,0 +1,15 @@
+&{
+  height: 58px;
+  z-index: 1;
+
+  .app-logo-image{
+    font-family: 'Lobster';
+    font-weight: normal;
+    display: inline-block;
+    color: #fff;
+    line-height: 55px;
+    font-size: ($font-size + 22);
+    margin-right: -200px;
+    text-shadow: $box-shadow;
+  }
+}

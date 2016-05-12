@@ -1,0 +1,32 @@
+&{
+  background: $color-grey;
+  padding: $whitespace;
+  border-left: 3px solid $color-brand;
+
+  .hfc-contact {
+    @include flexbox($direction: column);
+    @include respond-above(l) {@include flexbox();}
+    &:not(:last-child) {margin-bottom: $whitespace;}
+  }
+  .hfc-contact-input {
+    @include column();
+    @include respond-below(l) {@include column(1/1);}
+    outline: none;
+    font-size: $font-size;
+    border: $border;
+    padding: ($whitespace*0.5) ($whitespace*0.5);
+  }
+  .hfc-contact-addon {
+    min-width: 100px;
+    padding: 0 0 ($whitespace*0.5) 0;
+    @include respond-above(l) {padding: ($whitespace*0.5) ($whitespace*0.5) 0 0;}
+  }
+  .hfc-contact-controls {
+    @include flexbox($justify: flex-end);
+    @include column();
+  }
+  .hfc-contact-submit {
+    @include button();
+    font-size: $font-size;
+  }
+}
