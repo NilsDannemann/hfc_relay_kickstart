@@ -1,21 +1,18 @@
 &{
   background: $color-brand;
-  @include respond-above(m) {
-    box-shadow: 0px 10px 10px -7px rgba(0,0,0,0.25) inset, 0px 45px 35px -17px rgba(0,0,0,0.2) inset;
-  }
 
   .nav-main-container {
     @include container();
     @include flexbox($justify: space-between, $align: center);
     @include respond-below(xxl) {padding-right: $whitespace; padding-left: $whitespace;}
-    padding-bottom: $whitespace;
   }
 
+  /* =======================================*/
+  /* SMARTMENUS - NAVIGATION ICON
+  /* =======================================*/
   .nav-main-container-mobile-icon{
     @include button($color: transparent);
     @include respond-above(l) {display: none;}
-    padding-right: 0;
-    transition: none;
     font-style: normal;
     font-size: 21px;
     z-index: 1000;
@@ -36,6 +33,9 @@
     }
   }
 
+  /* =======================================*/
+  /* SMARTMENUS - MOBILE VERSION
+  /* =======================================*/
   .nav-main-theme {
     @include transition(transform, $duration: 200ms, $type: easeOutSine);
     @include position(absolute, $top: 0, $right: 0);
@@ -72,7 +72,8 @@
     & li {}
     & > li {}
 
-    // Subnav: Level 2
+    /* SMARTMENUS - MOBILE - LEVEL 2
+    /* ============================*/
     & ul {
       background: darken($color-brand, 5%);
 
@@ -83,7 +84,8 @@
       }
     }
 
-    // Subnav: Level 3
+    /* SMARTMENUS - MOBILE - LEVEL 3
+    /* ============================*/
     & ul ul {
       background: darken($color-brand, 7%);
 
@@ -94,7 +96,8 @@
       }
     }
 
-    // Subnav: Level 4
+    /* SMARTMENUS - MOBILE - LEVEL 4
+    /* ============================*/
     & ul ul ul {
       background: darken($color-brand, 10%);
 
@@ -106,7 +109,9 @@
     }
   }
 
-  // Desktop Version
+  /* =======================================*/
+  /* SMARTMENUS - DESKTOP VERSION
+  /* =======================================*/
   @include respond-above(l) {
     /* start... (don't touch these) */
     .nav-main-theme {
@@ -143,14 +148,12 @@
         .sub-arrow {}
       }
 
-      & > li {
-        box-shadow: -1px 0px 0px rgba(0,0,0,0.15) inset,1px 0px 0px rgba(255,255,255,0.15);
-      }
+      & > li {}
 
+      /* SMARTMENUS - DESKTOP - LEVEL 2
+      /* ============================*/
       & ul {
         background: #fff;
-        border-radius: $border-radius;
-
 
         a {
           color: $color-text;
@@ -160,24 +163,55 @@
           &:active,
           &.highlighted,
           &.current {color: #fff;}
-          &.disabled {}
 
           &.has-submenu {}
-          .sub-arrow {&:after{content: '\f0da';}}
+          .sub-arrow {
+            &:after{content: '\f0da';}
+          }
         }
       }
+
+      /* SMARTMENUS - DESKTOP - LEVEL 3
+      /* ============================*/
       & ul ul {
+        background: #fff;
 
         & a {
-          color: #fff;
+          color: $color-text;
 
           &:hover,
           &:focus,
-          &:active {background: darken($color-brand, 10%);}
+          &:active {}
         }
       }
 
-      // Scroll Arrows
+      /* SMARTMENUS - DESKTOP - LEVEL 4
+      /* ============================*/
+      & ul ul ul {
+        background: #fff;
+
+        & a {
+          color: $color-text;
+
+          &:hover,
+          &:focus,
+          &:active {}
+        }
+      }
+      & ul ul ul ul {
+        background: #fff;
+
+        & a {
+          color: $color-text;
+
+          &:hover,
+          &:focus,
+          &:active {}
+        }
+      }
+
+      /* SMARTMENUS - DESKTOP - SCROLL ARROWS
+      /* ============================*/
       // For: Submenus above viewport height
       span {
         &.scroll-up,
