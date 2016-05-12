@@ -1,3 +1,17 @@
-& {
+&{
+  border-bottom: $border;
 
+  .nav-top-container {
+    @include container();
+    @include flexbox($justify: flex-end, $align: center);
+  }
+
+  .nav-top-item {
+    border-right: $border;
+    padding: ($whitespace*0.75) $whitespace;
+
+    &:hover {
+      background: $color-grey;
+    }
+  }
 }

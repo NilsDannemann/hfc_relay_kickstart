@@ -1,90 +1,51 @@
 &{
-  @include flexbox($direction: column, $align: stretch);
-  @include respond-above(l) {@include flexbox($direction: row);}
-  margin-top: $whitespace*2;
-  margin-bottom: 0;
-  box-shadow: $box-shadow;
-  overflow: hidden;
+  @include flexbox();
+  margin-bottom: $whitespace;
+  border: $border;
 
   .download-content {
     @include flexbox();
     @include column();
   }
+
   .download-controls{
     @include flexbox();
     align-self: stretch;
-    border-top: $border;
-
-    @include respond-above(l) {
-      border: 0;
-      background: $color-grey;
-      background: -moz-linear-gradient(left,  #f7f7f7 0%, rgba(255, 255, 255, 0) 100%);
-      background: -webkit-linear-gradient(left,  #f7f7f7 0%,rgba(255, 255, 255, 0) 100%);
-      background: linear-gradient(to right,  #f7f7f7 0%,rgba(255, 255, 255, 0) 100%);
-      box-shadow: 5px 0px 7px -5px rgba(0, 0, 0, 0.2) inset;
-    }
   }
 
   .download-size,
-  .download-link{padding: ($whitespace*0.6) $whitespace;}
+  .download-link{
+    padding: ($whitespace*0.45) $whitespace ($whitespace*0.25) $whitespace;
+  }
 
-  .download-size{color: darken($color-grey, 35%);}
+  .download-size{
+    color: darken($color-grey, 25%);
+  }
+
   .download-link{
     align-self: stretch;
-    position: relative;
-
-    &:after{
-      @include transition();
-      @include position(absolute, $top: 43px, $right: 35px)
-      content: '\f0ed';
-      font-family: FontAwesome;
-      font-size: 20px;
-      opacity: 0;
-      transform: translateY(-5px);
-    }
-    &:hover{
-      background: $color-grey;
-      &:after {
-        opacity: 1;
-        transform: translateY(0px);
-      }
-    }
   }
 
   .download-title {
-    @include flexbox($justify: flex-start, $align: center, $wrap: no-wrap);
+    @include flexbox($justify: start, $align: center);
     @include column(1/1);
-    background: $color-brand;
     color: #fff;
-    border-top-left-radius: $border-radius;
+    background: $color-brand;
+    padding: ($whitespace*0.25) ($whitespace*0.5);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &:before {
-      @include flexbox($justify: center, $align: center);
-      flex: 0 0 auto;
-      content: '\f0ed';
-      font-family: 'FontAwesome';
-      height: ($whitespace*2);
-      width: ($whitespace*2);
-      background: darken($color-brand, 5%);
-      margin-right: ($whitespace*0.5);
-      border-top-left-radius: $border-radius;
-    }
-
-    span {
-      font-family: $font-text;
+    .download-type {
       font-weight: normal;
-      background: darken($color-brand, 3%);
+      font-family: $font-family-text;
+      background: darken($color-brand, 7%);
       padding: ($whitespace*0.25) ($whitespace*0.5);
       margin-right: ($whitespace*0.5);
       font-size: $font-size - 2;
-      border-radius: $border-radius;
     }
   }
   .download-text {
-    color: lighten($color-text, 15%);
-    padding: ($whitespace*0.5) $whitespace ($whitespace*0.5) $whitespace;
+    padding: $whitespace;
   }
 }

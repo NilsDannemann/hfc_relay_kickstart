@@ -12,20 +12,13 @@
   }
 
   .hfc-content-image {
-    @include column(1/1);
-    margin-bottom: $whitespace;
+    @include column(350px);
+    &.hfc-content-image-left{margin-right: $whitespace;}
+    &.hfc-content-image-right{margin-left: $whitespace; order: 2}
 
-    @include respond-above(xl) {
-      @include column(300px);
-      &.hfc-content-image-left{margin-right: $whitespace;}
-      &.hfc-content-image-right{margin-left: $whitespace; order: 2}
-    }
-    @include respond-above(xxl) {@include column(400px);}
+    img {}
 
-    img {
-      border-radius: $border-radius;
-    }
-    span {
+    .hfc-content-image-subtitle {
       display: block;
       color: darken($color-grey, 25%);
       padding-top: ($whitespace*0.5);

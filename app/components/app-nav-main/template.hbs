@@ -1,20 +1,26 @@
 <nav class="nav-main-container">
+  {{!-- Logo --}}
   {{app-logo}}
 
+  {{!-- Mobile Navigation Icon --}}
   <i class="nav-main-container-mobile-icon {{if isOpen 'is-open'}}" {{action "toggleNavigation"}}></i>
 
+  {{!-- Navigation --}}
   <ul id="nav-main" class="sm nav-main-theme {{if isOpen 'is-open'}}">
     <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-    <li>{{#link-to 'index'}}Kontakt{{/link-to}}</li>
-    <li>{{#link-to 'page-components'}}HFC Components{{/link-to}}
+    <li>{{#link-to 'index'}}Page{{/link-to}}</li>
+    <li>{{#link-to 'index'}}Page{{/link-to}}</li>
+    <li>{{#link-to 'index'}}Page{{/link-to}}</li>
+    <li>{{#link-to 'index'}}Page{{/link-to}}</li>
+    <li>{{#link-to 'page-hfc-components'}}HFC Components{{/link-to}}
       <ul>
-        <li>{{#link-to 'page-components.page-teaser-single'}}Teaser Single{{/link-to}}</li>
-        <li>{{#link-to 'page-components.page-teaser-double'}}Teaser Double{{/link-to}}</li>
-        <li>{{#link-to 'page-components.page-teaser-triple'}}Teaser Triple{{/link-to}}</li>
-        <li>{{#link-to 'page-components.page-downloads'}}Teaser Downloads{{/link-to}}</li>
-        <li>{{#link-to 'page-components.page-gallery'}}Teaser Gallery{{/link-to}}</li>
-        <li>{{#link-to 'page-components.page-content'}}Teaser Content{{/link-to}}</li>
-        <li>{{#link-to 'page-components.page-contact'}}Teaser Contact{{/link-to}}</li>
+        <li>{{#link-to 'page-hfc-components.page-hfc-teaser-single'}}Teaser Single{{/link-to}}</li>
+        <li>{{#link-to 'page-hfc-components.page-hfc-teaser-double'}}Teaser Double{{/link-to}}</li>
+        <li>{{#link-to 'page-hfc-components.page-hfc-teaser-triple'}}Teaser Triple{{/link-to}}</li>
+        <li>{{#link-to 'page-hfc-components.page-hfc-download'}}Downloads{{/link-to}}</li>
+        <li>{{#link-to 'page-hfc-components.page-hfc-gallery'}}Gallery{{/link-to}}</li>
+        <li>{{#link-to 'page-hfc-components.page-hfc-text-image'}}Text & Image{{/link-to}}</li>
+        <li>{{#link-to 'page-hfc-components.page-hfc-contact'}}Contact{{/link-to}}</li>
       </ul>
     </li>
   </ul>

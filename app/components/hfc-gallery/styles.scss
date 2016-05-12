@@ -2,11 +2,8 @@
   @include flexbox();
 
   .hfc-gallery-image{
-    @include column(1/1, $gutter: true);
-    @include respond-above(s) {@include column(1/2, $gutter: true);}
-    @include respond-above(l) {@include column(1/3, $gutter: true);}
-    @include respond-above(xl) {@include column(1/5, $gutter: true);}
     @include flexbox();
+    @include column(1/5, $gutter: true);
     border-radius: $border-radius;
     overflow: hidden;
 

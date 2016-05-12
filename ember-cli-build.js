@@ -11,6 +11,10 @@ module.exports = function(defaults) {
   app.import('bower_components/Swiper/dist/css/swiper.min.css');
   app.import('bower_components/Swiper/dist/js/swiper.min.js');
 
+  // SmartMenus
+  app.import('bower_components/smartmenus/dist/jquery.smartmenus.min.js');
+  app.import('bower_components/smartmenus/dist/css/sm-core-css.css');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

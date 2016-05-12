@@ -1,3 +1,214 @@
-& {
+&{
+  background: $color-brand;
+  @include respond-above(m) {
+    box-shadow: 0px 10px 10px -7px rgba(0,0,0,0.25) inset, 0px 45px 35px -17px rgba(0,0,0,0.2) inset;
+  }
 
+  .nav-main-container {
+    @include container();
+    @include flexbox($justify: space-between, $align: center);
+    @include respond-below(xxl) {padding-right: $whitespace; padding-left: $whitespace;}
+    padding-bottom: $whitespace;
+  }
+
+  .nav-main-container-mobile-icon{
+    @include button($color: transparent);
+    @include respond-above(l) {display: none;}
+    padding-right: 0;
+    transition: none;
+    font-style: normal;
+    font-size: 21px;
+    z-index: 1000;
+
+    &:before{
+      content: '\f0c9';
+      font-family: FontAwesome;
+    }
+
+    &.is-open {
+      @include transition(transform, $duration: 450ms, $type: easeOutSine);
+      @include position(fixed, $top: 0, $right: 0);
+      transform: scaleX(45) scaleY(85);
+      border-radius: 100%;
+      background: rgba(255,255,255,0.65);
+      margin: 0;
+      &:before{opacity: 0;}
+    }
+  }
+
+  .nav-main-theme {
+    @include transition(transform, $duration: 200ms, $type: easeOutSine);
+    @include position(absolute, $top: 0, $right: 0);
+    height: 100%;
+    width: 350px;
+    background: $color-brand;
+    transform: translateX(370px);
+    &.is-open{transform: translateX(0px);}
+
+    a {
+      color: #fff;
+      font-size: $font-size + 2;
+      padding: $whitespace;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.highlighted,
+      &.current {background: darken($color-brand, 5%);}
+      &.disabled {opacity: 0.5;}
+
+      &.has-submenu {}
+      .sub-arrow {
+        float: right;
+        padding-left: ($whitespace*0.5);
+
+        &:after{
+          content: '\f0d7';
+          font-family: FontAwesome;
+        }
+      }
+    }
+
+    & li {}
+    & > li {}
+
+    // Subnav: Level 2
+    & ul {
+      background: darken($color-brand, 5%);
+
+      & a {
+        &:hover,
+        &:focus,
+        &:active {background: darken($color-brand, 7%);}
+      }
+    }
+
+    // Subnav: Level 3
+    & ul ul {
+      background: darken($color-brand, 7%);
+
+      & a {
+        &:hover,
+        &:focus,
+        &:active {background: darken($color-brand, 10%);}
+      }
+    }
+
+    // Subnav: Level 4
+    & ul ul ul {
+      background: darken($color-brand, 10%);
+
+      & a {
+        &:hover,
+        &:focus,
+        &:active {background: darken($color-brand, 13%);}
+      }
+    }
+  }
+
+  // Desktop Version
+  @include respond-above(l) {
+    /* start... (don't touch these) */
+    .nav-main-theme {
+      ul {position: absolute;width: 12em;}
+      li {float: left;}
+      a {white-space: nowrap;}
+      .sm-rtl li {float: right;}
+      ul li,
+      .sm-rtl ul li,
+      .sm-vertical li {float: none;}
+      ul a,
+      .sm-vertical a {white-space: normal;}
+      .sm-nowrap > li > a,
+      .sm-nowrap > li > :not(ul) a {white-space: nowrap;}
+    }/* ...end (don't touch these) */
+
+    .nav-main-theme {
+      @include position(relative, $top: 0, $right: 0);
+      height: inherit;
+      width: inherit;
+      background: transparent;
+      transform: none;
+
+      a {
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.highlighted,
+        &.current {background: darken($color-brand, 5%) !important;}
+        &.disabled {}
+
+        &.has-submenu {}
+        .sub-arrow {}
+      }
+
+      & > li {
+        box-shadow: -1px 0px 0px rgba(0,0,0,0.15) inset,1px 0px 0px rgba(255,255,255,0.15);
+      }
+
+      & ul {
+        background: #fff;
+        border-radius: $border-radius;
+
+
+        a {
+          color: $color-text;
+
+          &:hover,
+          &:focus,
+          &:active,
+          &.highlighted,
+          &.current {color: #fff;}
+          &.disabled {}
+
+          &.has-submenu {}
+          .sub-arrow {&:after{content: '\f0da';}}
+        }
+      }
+      & ul ul {
+
+        & a {
+          color: #fff;
+
+          &:hover,
+          &:focus,
+          &:active {background: darken($color-brand, 10%);}
+        }
+      }
+
+      // Scroll Arrows
+      // For: Submenus above viewport height
+      span {
+        &.scroll-up,
+        &.scroll-down {
+          position: absolute;
+          display: none;
+          visibility: hidden;
+          overflow: hidden;
+          background: darken($color-brand, 5%);;
+          height: $whitespace;
+        }
+        &.scroll-up-arrow,
+        &.scroll-down-arrow {
+          position: absolute;
+          top: -2px;
+          left: 50%;
+          margin-left: -8px;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          border-width: 8px;
+          border-style: dashed dashed solid dashed;
+          border-color: transparent transparent #fff transparent;
+        }
+        &.scroll-down-arrow {
+          top: 6px;
+          border-style: solid dashed dashed dashed;
+          border-color: #fff transparent transparent transparent;
+        }
+      }
+    }
+  }
 }
+
