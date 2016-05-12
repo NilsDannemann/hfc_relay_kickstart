@@ -1,5 +1,6 @@
 &{
   background: $color-brand;
+  margin-bottom: $whitespace;
 
   .nav-main-container {
     @include container();
@@ -37,7 +38,7 @@
   /* SMARTMENUS - MOBILE VERSION
   /* =======================================*/
   .nav-main-theme {
-    @include transition(transform, $duration: 200ms, $type: easeOutSine);
+    @include transition();
     @include position(absolute, $top: 0, $right: 0);
     height: 100%;
     width: 350px;
