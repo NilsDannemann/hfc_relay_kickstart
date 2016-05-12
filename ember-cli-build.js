@@ -7,6 +7,10 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  // Swiper
+  app.import('bower_components/Swiper/dist/css/swiper.min.css');
+  app.import('bower_components/Swiper/dist/js/swiper.min.js');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

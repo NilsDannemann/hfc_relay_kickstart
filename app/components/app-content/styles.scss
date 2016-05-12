@@ -1,0 +1,20 @@
+&{
+
+  .app-content-container {
+    @include container();
+    @include flexbox($align: stretch);
+    border: $border;
+    background: #fff;
+  }
+
+  .app-content-inner {
+    @include column();
+    padding: $whitespace;
+  }
+
+  .app-content-aside {
+    @include column($width-sidebar);
+    border-left: $border;
+    padding: $whitespace;
+  }
+}

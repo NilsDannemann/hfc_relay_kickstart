@@ -6,7 +6,7 @@
 
 $color-black        : #333333;
 $color-spaceblack   : #171F2D;
-$color-grey         : #eeeeee;
+$color-grey         : #e1e1e1;
 $color-spacegrey    : #a7adba;
 
 $color-red          : #F44336;
@@ -88,7 +88,7 @@ $line-height          : 1.6;
 /* =======================================*/
 
 // Border
-$border: 1px solid darken($color-grey, 5%);
+$border: 1px solid $color-grey;
 
 // Border-Radius
 $border-radius-xs  : 2px;

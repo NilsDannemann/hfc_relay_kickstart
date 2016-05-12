@@ -1,0 +1,18 @@
+&{
+  border: $border;
+  padding: $whitespace;
+  margin-bottom: $whitespace;
+
+  .hfc-infobox-title {}
+
+  .hfc-infobox-image{}
+
+  .hfc-infobox-link {
+
+    &:before{
+      content: '\f0da';
+      font-family: 'FontAwesome';
+      margin-right: ($whitespace*0.25);
+    }
+  }
+}

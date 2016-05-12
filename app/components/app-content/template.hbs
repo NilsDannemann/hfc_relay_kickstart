@@ -1,0 +1,38 @@
+<section class="app-content-container">
+  <div class="app-content-inner">
+    {{app-breadcrumb}}
+    {{outlet}}
+  </div>
+  <div class="app-content-aside">
+    {{#hfc-infobox title="Sidebar Liste"}}
+      {{sidebar-list}}
+    {{/hfc-infobox}}
+
+    {{#hfc-infobox title="Infobox"}}
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit laudantium voluptatibus dolorum nemo!</p>
+    {{/hfc-infobox}}
+
+    {{#hfc-infobox title="Infobox"}}
+      <img class="hfc-infobox-image" src="/images/placeholder2.png" alt="">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit laudantium voluptatibus dolorum nemo!</p>
+      <a href="#" class="hfc-infobox-link">Kontakt</a>
+    {{/hfc-infobox}}
+
+    {{#hfc-infobox title="Sidebar Downloads"}}
+      {{sidebar-downloads}}
+    {{/hfc-infobox}}
+
+    {{#hfc-infobox title="Kontakt"}}
+      <p>St.-Ludgeri-Schule</p>
+      <p>
+        Christoph Hesener <br>
+        Linderner Str. 16 <br>
+        49624 Löningen
+      </p>
+      <p>
+        Tel.: 05432/92290
+      </p>
+      <p>E-Mail: <a href="mailto:info@rs-loeningen.de">info@rs-loeningen.de</a></p>
+    {{/hfc-infobox}}
+  </div>
+</section>

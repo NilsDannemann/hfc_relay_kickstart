@@ -1,0 +1,23 @@
+&{
+
+  .app-footer-container{
+    @include container();
+    @include flexbox();
+    padding: $whitespace 0;
+  }
+
+  .app-footer-copyright{}
+
+  .app-footer-navigation{}
+
+  .app-footer-link{
+
+    &:not(:last-child){padding-right: $whitespace;}
+
+    &:before {
+      content: '\f0da';
+      font-family: 'FontAwesome';
+      margin-right: $whitespace;
+    }
+  }
+}
