@@ -1,0 +1,30 @@
+&{
+
+  .sidebar-list-container{
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .sidebar-list-item{
+    padding: ($whitespace*0.25) 0;
+
+    &:not(:last-child){border-bottom: $border;}
+    &:first-child {padding-top: 0;}
+    &:last-child {padding-bottom: 0;}
+
+    &:before{
+      content: '\f0da';
+      font-family: 'FontAwesome';
+      margin-right: ($whitespace*0.5);
+      color: darken($color-grey, 10%);
+    }
+
+    &:hover {
+      &:before {color: $color-brand;}
+    }
+
+    a {
+      color: $color-text;
+    }
+  }
+}
