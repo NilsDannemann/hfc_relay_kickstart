@@ -1,52 +1,62 @@
 &{
   @include flexbox();
-  margin-bottom: $whitespace;
-  border: $border;
 
-  .download-content {
+  .download-container {
+    @include flexbox();
+    @include column(1/1, $gutter: $whitespace);
+    @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
+    box-shadow: $box-shadow;
+    border-left: 2px solid $color-brand;
+  }
+
+  .download-container-inner {
     @include flexbox();
     @include column();
-    font-size: ($font-size - 2);
-  }
-
-  .download-controls{
-    @include flexbox();
-    align-self: stretch;
-  }
-
-  .download-size,
-  .download-link{
-    padding: ($whitespace*0.45) $whitespace;
-    border-left: $border;
-  }
-
-  .download-size{
-    color: darken($color-grey, 25%);
-  }
-
-  .download-link{
-    align-self: stretch;
   }
 
   .download-title {
-    @include flexbox($justify: start, $align: center);
-    @include column(1/1);
-    border-bottom: $border;
-    padding: ($whitespace*0.25);
+    @include flexbox($align: center, $justify: start, $wrap: nowrap);
+    padding: ($whitespace*0.75) $whitespace;
+    margin-bottom: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
     .download-type {
       color: #fff;
-      font-size: ($font-size - 3);
+      font-size: $font-size-s;
       font-family: $font-family-text;
       padding: ($whitespace*0.25) ($whitespace*0.5);
       margin-right: ($whitespace*0.5);
       background: darken($color-brand, 7%);
     }
   }
-  .download-text {
-    padding: ($whitespace*0.5);
+
+  .download-content {
+    padding: ($whitespace*0.75) $whitespace;
+    font-size: $font-size-s;
+    border-top: $border;
+  }
+
+  .download-controls{
+    @include flexbox();
+    @include respond-below(l) {
+      @include column(1/1);
+      border-top: $border;
+    }
+    align-self: stretch;
+  }
+
+  .download-size,
+  .download-link{
+    padding: ($whitespace*0.97) $whitespace;
+    border-left: $border;
+  }
+  .download-size{
+    color: darken($color-grey, 25%);
+    @include respond-below(l) {border: 0;}
+  }
+  .download-link{
+    align-self: stretch;
   }
 }

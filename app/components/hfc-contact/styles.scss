@@ -1,6 +1,7 @@
 &{
   padding: $whitespace;
-  border: $border;
+  box-shadow: $box-shadow;
+  border-left: 2px solid $color-brand;
 
   .hfc-contact {
     @include flexbox($direction: column);

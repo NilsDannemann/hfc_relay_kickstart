@@ -13,7 +13,7 @@
   /* =======================================*/
   .nav-main-container-mobile-icon{
     @include button($color: transparent);
-    @include respond-above(l) {display: none;}
+    @include respond-above(m) {display: none;}
     font-style: normal;
     font-size: 21px;
     z-index: 1000;
@@ -113,7 +113,7 @@
   /* =======================================*/
   /* SMARTMENUS - DESKTOP VERSION
   /* =======================================*/
-  @include respond-above(l) {
+  @include respond-above(m) {
     /* start... (don't touch these) */
     .nav-main-theme {
       ul {position: absolute;width: 12em;}

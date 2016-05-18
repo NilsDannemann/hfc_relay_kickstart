@@ -2,23 +2,36 @@
   @include flexbox();
 
   .teaser-container {
-    @include column(1/3, $gutter: $whitespace);
+    @include column(1/1, $gutter: $whitespace);
+    @include respond-above(s) {@include column(1/2, $gutter: $whitespace);}
+    @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
+    @include respond-above(l) {@include column(1/2, $gutter: $whitespace);}
+    @include respond-above(xl) {@include column(1/3, $gutter: $whitespace);}
+    box-shadow: $box-shadow;
   }
 
   .teaser-image{
     overflow: hidden;
-    margin-bottom: ($whitespace*0.5);
   }
 
   .teaser-title {
-    color: #fff;
-    background: $color-brand;
-    padding: ($whitespace*0.5);
+    padding: ($whitespace*0.75) $whitespace;
     margin-bottom: 0;
+    border-bottom: 2px solid $color-brand;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  .teaser-content{}
+  .teaser-content{
+    padding: ($whitespace*0.75) $whitespace;
+    margin-bottom: 0;
+    font-size: $font-size-s;
+  }
+
+  .teaser-controls {
+    display: block;
+    padding: ($whitespace*0.75) $whitespace;
+    border-top: $border;
+  }
 }

@@ -8,12 +8,12 @@
   }
 
   .app-content-inner {
-    @include column();
+    @include column($behavior: stacking);
     padding: $whitespace;
   }
 
   .app-content-aside {
-    @include column($width-sidebar);
+    @include column($width-sidebar, $behavior: stacking);
     border-left: $border;
     padding: $whitespace;
   }
