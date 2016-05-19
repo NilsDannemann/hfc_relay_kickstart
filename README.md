@@ -14,7 +14,7 @@ Clone this Repo.
 npm & bower install
 
 ####3. Rename Project<br> 
-Change Project Name in `package.json`
+Change Project Name in `package.json`<br> 
 `"name": "my-project"`
 
 Update Project
