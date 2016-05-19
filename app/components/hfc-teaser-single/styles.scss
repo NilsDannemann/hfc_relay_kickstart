@@ -11,7 +11,10 @@
 
   .teaser-image{
     @include column(1/1);
-    @include respond-above(l) {@include column($width-sidebar);}
+    @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
+    @include respond-above(l) {@include column(1/2, $gutter: $whitespace);}
+    @include respond-above(xl) {@include column(1/3, $gutter: $whitespace);}
+    margin-bottom: 0 !important;
     min-height: 150px;
     min-height: 25vh;
     background-repeat: no-repeat;
@@ -44,6 +47,7 @@
   }
 
   .teaser-controls {
+    color: $color-headline;
     padding: ($whitespace*0.75) $whitespace;
     border-top: $border;
   }
