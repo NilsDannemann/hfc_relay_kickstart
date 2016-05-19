@@ -7,8 +7,8 @@ HFC Relay Framework (SCSS) - Ember Scaffold
 ## Installation
 
 ####1. Clone<br>
-Clone this Repo.
-
+Clone this Repo as a new Project.
+`curl -L https://github.com/NilsDannemann/hfc_relay_kickstart | tar zx
 
 ####2. Install Dependencies<br> 
 npm & bower install
