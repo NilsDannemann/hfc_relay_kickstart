@@ -1,11 +1,20 @@
-# Hfc Relay Kickstart
+![alt tag](https://dl.dropboxusercontent.com/u/7534528/HFC/Relay/relay_logo.jpg)
 
-### Setup
-1. git clone 
-2. npm install 
-3. bower install 
-4. ember s
+# HFC Relay Kickstart
+HFC Relay Framework (SCSS) - Ember Scaffold
 
-HFC Relay Docs <a href="https://github.com/NilsDannemann/hfc_relay_npm">here</a>
+<br><hr>
+## Installation
 
-Enjoy
+####1. Clone<br>
+Clone this Repo.
+
+
+####2. Install Dependencies<br> 
+npm & bower install
+
+####3. Start Working<br> 
+ember s
+
+# HFC Relay
+[View Docs](https://github.com/NilsDannemann/hfc_relay_npm/)
