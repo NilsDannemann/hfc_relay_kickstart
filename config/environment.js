@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'hfc-relay-npm-scaffold-e',
+    modulePrefix: 'hfc-relay-kickstart',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

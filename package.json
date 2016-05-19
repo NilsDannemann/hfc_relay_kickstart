@@ -1,7 +1,7 @@
 {
-  "name": "hfc-relay-npm-scaffold-e",
+  "name": "hfc-relay-kickstart",
   "version": "0.0.0",
-  "description": "Small description for hfc-relay-npm-scaffold-e goes here",
+  "description": "HFC Relay Project Scaffold for Ember",
   "private": true,
   "directories": {
     "doc": "doc",
