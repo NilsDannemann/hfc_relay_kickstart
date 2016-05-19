@@ -16,7 +16,7 @@ npm & bower install
 ####3. Rename Project<br> 
 - Rename Folder <br> 
 
-- Change Project Name in package.json<br> 
+- Change Project Name in package.json & bower.json<br> 
 `"name": "my-project"`
 
 - Update Project<br> 
