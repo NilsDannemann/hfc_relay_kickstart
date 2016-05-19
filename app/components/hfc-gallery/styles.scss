@@ -18,14 +18,14 @@
       @include transition();
       @include position(absolute, $top:0, $right:0, $bottom:0, $left:0);
       content: '';
-      background: $color-black;
+      background: $color-brand;
       height: 100%;
       width: 100%;
       opacity: 0;
     }
     &:hover {
       &:before{
-        opacity: .5;
+        opacity: .7;
       }
     }
 
@@ -41,12 +41,12 @@
       width: 50px;
       border-radius: 100%;
       opacity: 0;
-      transform: translateY($whitespace*0.5);
+      transform: scale(0.5);
     }
     &:hover {
       &:after{
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
       }
     }
 
