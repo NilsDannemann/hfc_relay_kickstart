@@ -1,7 +1,7 @@
 {
   "name": "hfc-relay-kickstart",
   "version": "0.0.0",
-  "description": "HFC Relay Project Scaffold for Ember",
+  "description": "HFC Relay Framework (SCSS) - Ember Scaffold",
   "private": true,
   "directories": {
     "doc": "doc",
