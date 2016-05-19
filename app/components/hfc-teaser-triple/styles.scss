@@ -1,7 +1,8 @@
 &{
-  @include flexbox();
+  @include flexbox($align: stretch);
 
   .teaser-container {
+    @include flexbox($direction: column, $align: stretch); // For: No-Img Fallback
     @include column(1/1, $gutter: $whitespace);
     @include respond-above(s) {@include column(1/2, $gutter: $whitespace);}
     @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
@@ -31,6 +32,7 @@
   }
 
   .teaser-content{
+    flex: 1; // For: No-Img Fallback
     padding: ($whitespace*0.75) $whitespace;
     margin-bottom: 0;
     font-size: $font-size-s;
