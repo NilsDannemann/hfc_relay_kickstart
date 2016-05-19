@@ -14,23 +14,23 @@ Clone this Repo as a new Project (curl).<br>
 npm & bower install
 
 ####3. Rename Project<br> 
-Rename Folder <br> 
+- Rename Folder <br> 
 
-Change Project Name in `package.json`<br> 
+- Change Project Name in `package.json`<br> 
 `"name": "my-project"`
 
-Update Project
+- Update Project
 `ember init`
 
-- Overwrite .ember-cli? (n)
-- Overwrite README.md? (Y)
-- Overwrite app/index.html? (Y)
-- Overwrite app/router.js? (n)
-- Overwrite bower.json? (n)
-- Overwrite config/environment.js? (Y)
-- Overwrite ember-cli-build.js? (n)
-- Overwrite package.json? (n)
-- Overwrite tests/index.html? (Y)
+    - Overwrite .ember-cli? (n)
+    - Overwrite README.md? (Y)
+    - Overwrite app/index.html? (Y)
+    - Overwrite app/router.js? (n)
+    - Overwrite bower.json? (n)
+    - Overwrite config/environment.js? (Y)
+    - Overwrite ember-cli-build.js? (n)
+    - Overwrite package.json? (n)
+    - Overwrite tests/index.html? (Y)
 
 
 ####4. Start Working<br> 
