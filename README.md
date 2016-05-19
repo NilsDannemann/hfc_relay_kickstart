@@ -13,7 +13,16 @@ Clone this Repo.
 ####2. Install Dependencies<br> 
 npm & bower install
 
-####3. Start Working<br> 
+####3. Rename Project<br> 
+Change Project Name in `package.json`
+`"name": "my-project"`
+
+Update Project
+`ember init`
+
+
+
+####4. Start Working<br> 
 ember s
 
 # HFC Relay
