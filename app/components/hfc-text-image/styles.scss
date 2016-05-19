@@ -12,18 +12,34 @@
   }
 
   .hfc-content-image {
-    @include column(350px);
-    &.hfc-content-image-left{margin-right: $whitespace;}
-    &.hfc-content-image-right{margin-left: $whitespace; order: 2}
+    @include column(1/1, $gutter: true);
+    @include respond-above(l) {@include column(350px);}
+    &.hfc-content-image-left {
+      @include respond-above(l) {
+        margin-right: $whitespace;
+      }
+    }
+    &.hfc-content-image-right {
+      @include respond-above(l) {
+        order: 2; // right alignment
+        margin-left: $whitespace;
+      }
+    }
 
     img {}
 
     .hfc-content-image-subtitle {
       display: block;
+      font-size: $font-size-s;
       color: darken($color-grey, 25%);
       padding-top: ($whitespace*0.5);
     }
   }
 
-  .hfc-content-text {@include column();}
+  .hfc-content-text {
+    @include column(1/1);
+    @include respond-above(m) {
+      @include column();
+    }
+  }
 }

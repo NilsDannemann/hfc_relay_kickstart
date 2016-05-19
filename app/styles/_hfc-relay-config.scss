@@ -30,7 +30,7 @@ $color-amber        : #FFC107;
 $color-orange       : #FF9800;
 
 // Hooks
-$color-brand        : $color-blue;
+$color-brand        : $color-lightblue;
 $color-headline     : $color-black;
 $color-text         : lighten($color-black, 15%);
 
@@ -54,9 +54,13 @@ $breakpoints: (
   'xxl' : 1400px
 );
 
-// Element Queries (experimental)
+// Experimental Features
+// Element Queries
 // <script src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.1.0/EQCSS.min.js"></script>
-$use-elementqueries  : false;
+$use-elementqueries    : false;
+
+// Transition Everything
+$transition-everything : false;
 
 // Devmode
 $devmode-overlay     : false;

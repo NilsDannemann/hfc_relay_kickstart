@@ -18,7 +18,7 @@ export default Ember.Component.extend({
     });
 
     let self = this;
-    Ember.$('#nav-main').bind('select.smapi', function(e, item) {
+    Ember.$('#nav-main').bind('select.smapi', function() {
       Ember.run.schedule('afterRender', self, function() {
         this.triggerAction({
           action:'toggleNavigation',
