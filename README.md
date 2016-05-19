@@ -6,4 +6,6 @@
 3. bower install 
 4. ember s
 
+HFC Relay Docs <a href="https://github.com/NilsDannemann/hfc_relay_npm">here</a>
+
 Enjoy
