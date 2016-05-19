@@ -39,7 +39,7 @@
   /* =======================================*/
   .nav-main-theme {
     @include transition();
-    @include position(absolute, $top: 0, $right: 0);
+    @include position(fixed, $top: 0, $right: 0);
     height: 100%;
     width: 350px;
     background: $color-brand;
