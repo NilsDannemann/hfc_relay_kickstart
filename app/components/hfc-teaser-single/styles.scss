@@ -2,7 +2,7 @@
   @include flexbox();
 
   .teaser-container {
-    @include flexbox();
+    @include flexbox($align: stretch);
     @include column(1/1, $gutter: $whitespace);
     @include respond-above(s) {@include column(1/2, $gutter: $whitespace);}
     @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
@@ -12,6 +12,11 @@
   .teaser-image{
     @include column(1/1);
     @include respond-above(l) {@include column($width-sidebar);}
+    min-height: 150px;
+    min-height: 25vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     overflow: hidden;
   }
 

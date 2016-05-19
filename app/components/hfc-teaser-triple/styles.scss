@@ -11,6 +11,12 @@
   }
 
   .teaser-image{
+    height: 150px;
+    height: 20vh;
+    min-height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     overflow: hidden;
   }
 
