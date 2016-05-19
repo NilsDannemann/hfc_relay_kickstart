@@ -16,10 +16,10 @@ npm & bower install
 ####3. Rename Project<br> 
 - Rename Folder <br> 
 
-- Change Project Name in `package.json`<br> 
+- Change Project Name in package.json<br> 
 `"name": "my-project"`
 
-- Update Project
+- Update Project<br> 
 `ember init`
 
     - Overwrite .ember-cli? (n)
