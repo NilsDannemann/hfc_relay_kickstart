@@ -9,7 +9,7 @@
   }
 
   /* =======================================*/
-  /* SMARTMENUS - NAVIGATION ICON
+  /* SMARTMENUS - NAV ICON
   /* =======================================*/
   .nav-main-container-mobile-icon{
     @include button($color: transparent);
@@ -44,6 +44,7 @@
     width: 350px;
     background: $color-brand;
     transform: translateX(370px);
+    overflow: scroll;
     &.is-open{transform: translateX(0px);}
 
     a {
@@ -55,7 +56,8 @@
       &:focus,
       &:active,
       &.highlighted,
-      &.current {background: darken($color-brand, 5%);}
+      &.current,
+      &.active {background: darken($color-brand, 5%);}
       &.disabled {opacity: 0.5;}
 
       &.has-submenu {}
@@ -142,7 +144,8 @@
         &:focus,
         &:active,
         &.highlighted,
-        &.current {background: darken($color-brand, 5%) !important;}
+        &.current,
+        &.active {background: darken($color-brand, 5%) !important;}
         &.disabled {}
 
         &.has-submenu {}
@@ -163,7 +166,8 @@
           &:focus,
           &:active,
           &.highlighted,
-          &.current {color: #fff;}
+          &.current,
+          &.active {color: #fff;}
 
           &.has-submenu {}
           .sub-arrow {
