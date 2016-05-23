@@ -4,7 +4,7 @@
   .hfc-gallery-image{
     @include flexbox($align: center, $justify: center);
     @include column(1/2, $gutter: true);
-    @include respond-above(l) {@include column(1/4, $gutter: true);}
+    @include respond-above(l) {@include column(1/3, $gutter: true);}
     @include respond-above(xl) {@include column(1/6, $gutter: true);}
     height: 150px;
     background-repeat: no-repeat;
