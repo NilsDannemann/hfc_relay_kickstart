@@ -4,17 +4,18 @@
   border-left: 2px solid $color-brand;
 
   .hfc-contact {
-    @include flexbox($direction: column);
+    @include flexbox();
     margin-bottom: $whitespace;
   }
   .hfc-contact-label {
+    @include column(100px);
     color: $color-headline;
     font-family: $font-family-headline;
     font-weight: bold;
     margin-bottom: ($whitespace*0.5);
   }
   .hfc-contact-input {
-    @include column(1/1);
+    @include column();
     font-size: $font-size;
     border: $border;
     padding: ($whitespace*0.5) ($whitespace*0.5);
