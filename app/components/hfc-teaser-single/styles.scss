@@ -20,7 +20,44 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    overflow: hidden;
+    position: relative; //For: Overlay
+
+    // OVERLAY DIMMER
+    &:before {
+      @include transition();
+      @include position(absolute, $top:0, $right:0, $bottom:0, $left:0);
+      content: '';
+      background: $color-brand;
+      opacity: 0;
+    }
+    &:hover {
+      &:before{
+        opacity: .7;
+      }
+    }
+
+    // OVERLAY ICON
+    &:after {
+      @include transition();
+      @include flexbox($align: center, $justify: center);
+      @include position(absolute, $top:calc(50% - #{($whitespace*1.5)}), $left:calc(50% - #{($whitespace*1.5)}));
+      content:'\f090';
+      font-family: FontAwesome;
+      font-size: $font-size-l;
+      height: ($whitespace*3);
+      width: ($whitespace*3);
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    &:hover {
+      &:after{
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
 
   .teaser-container-inner {
