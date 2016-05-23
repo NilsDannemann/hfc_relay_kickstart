@@ -5,6 +5,8 @@
     @include flexbox($align: stretch);
     border: $border;
     background: #fff;
+
+    @include respond-below(xxl) {margin: 0 $whitespace;}
   }
 
   .app-content-inner {

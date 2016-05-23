@@ -4,6 +4,8 @@
     @include container();
     @include flexbox();
     padding: $whitespace 0;
+
+    @include respond-below(xxl) {margin: 0 $whitespace;}
   }
 
   .app-footer-copyright{}

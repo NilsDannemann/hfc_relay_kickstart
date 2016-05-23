@@ -44,7 +44,7 @@
     width: 350px;
     background: $color-brand;
     transform: translateX(370px);
-    overflow: scroll;
+    overflow: scroll; //For: mobile-nav scrollable when higher than viewport
     &.is-open{transform: translateX(0px);}
 
     a {
@@ -137,6 +137,7 @@
       width: inherit;
       background: transparent;
       transform: none;
+      overflow: inherit; //For: mobile-nav scrollable when higher than viewport
 
       a {
 
