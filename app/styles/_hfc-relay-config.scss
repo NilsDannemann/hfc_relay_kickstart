@@ -139,15 +139,15 @@ $transition-duration   : 450ms;
 $transition-type       : $transition-type-quint;
 
 // Overlay
-$global-overlay           : true;
-$global-overlay-color       : $color-brand;
-$global-overlay-opacity       : 0.85;
+$global-overlay                   : true;
+$global-overlay-color             : $color-brand;
+$global-overlay-opacity           : 0.85;
 
-$global-overlay-icon        : '\f0da';
+$global-overlay-icon              : '\f0da';
 $global-overlay-icon-font-family  : 'FontAwesome';
-$global-overlay-icon-color      : #fff;
-$global-overlay-icon-width      : ($whitespace*3);
-$global-overlay-icon-height     : ($whitespace*3);
+$global-overlay-icon-color        : #fff;
+$global-overlay-icon-width        : ($whitespace*3);
+$global-overlay-icon-height       : ($whitespace*3);
 $global-overlay-icon-font-size    : $font-size-m;
-$global-overlay-icon-border     : 2px solid $global-overlay-icon-color;
-$global-overlay-icon-border-radius  : 100%;
+$global-overlay-icon-border       : 2px solid $global-overlay-icon-color;
+$global-overlay-icon-border-radius: 100%;
