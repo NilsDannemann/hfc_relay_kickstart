@@ -6,7 +6,7 @@
 
 $color-black        : #333333;
 $color-spaceblack   : #171F2D;
-$color-grey         : #EFEFEF;
+$color-grey         : #efefef;
 $color-spacegrey    : #a7adba;
 
 $color-red          : #F44336;
@@ -30,7 +30,7 @@ $color-amber        : #FFC107;
 $color-orange       : #FF9800;
 
 // Hooks
-$color-brand        : $color-lightblue;
+$color-brand        : $color-blue;
 $color-headline     : $color-black;
 $color-text         : lighten($color-black, 15%);
 
@@ -42,9 +42,8 @@ $color-text         : lighten($color-black, 15%);
 /* =======================================*/
 
 // Globals
-$whitespace          : 20px;
-$width-sidebar       : 325px;
-$global-border-box   : true;
+$whitespace    : 20px;
+$width-sidebar : 325px;
 $breakpoints: (
   'xs'  : 0px,
   's'   : 410px,
@@ -55,16 +54,16 @@ $breakpoints: (
 );
 
 // Experimental Features
-// Element Queries
+// Element Queries (needs testing)
 // <script src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.1.0/EQCSS.min.js"></script>
 $use-elementqueries    : false;
 
-// Transition Everything
+// Transition Everything (works, but not performant)
 $transition-everything : false;
 
-// Devmode
-$devmode-overlay     : false;
-$devmode-breakpoints : false;
+// Devmode (works)
+$devmode-overlay       : false;
+$devmode-breakpoints   : false;
 
 
 /* =======================================*/
@@ -73,16 +72,27 @@ $devmode-breakpoints : false;
 /*
 /* =======================================*/
 
-// Font Imports
+// Font-Family-Imports
 @import url(https://fonts.googleapis.com/css?family=Raleway:500,600,400);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300);
 
-// Globals
+// Font-Families
 $font-family-headline : 'Raleway', sans-serif;
 $font-family-text     : 'Roboto', sans-serif;
 $font-family          : $font-family-text;
-$font-size            : 14px;
-$line-height          : 1.6;
+
+// Font-Size
+$font-size-xs  : 10px;
+$font-size-s   : 12px;
+$font-size-m   : 14px;
+$font-size-l   : 16px;
+$font-size-xl  : 20px;
+$font-size-xxl : 28px;
+
+$font-size     : $font-size-m;
+
+// Line-Height
+$line-height   : 1.6;
 
 
 /* =======================================*/
@@ -112,6 +122,7 @@ $box-shadow-l   : 0px 8px 18px rgba(0, 0, 0, 0.2);
 $box-shadow-xl  : 0px 16px 32px rgba(0, 0, 0, 0.2);
 $box-shadow-xxl : 0px 32px 64px rgba(0, 0, 0, 0.2);
 
+$box-shadow-soft : 0px 0px 35px rgba(0, 0, 0, 0.05); //For: better highlight white boxes on white ground
 $box-shadow     : $box-shadow-s;
 
 // Transition
@@ -126,3 +137,17 @@ $transition-type-back  : ease-out-back;
 
 $transition-duration   : 450ms;
 $transition-type       : $transition-type-quint;
+
+// Overlay
+$global-overlay           : true;
+$global-overlay-color       : $color-brand;
+$global-overlay-opacity       : 0.85;
+
+$global-overlay-icon        : '\f0da';
+$global-overlay-icon-font-family  : 'FontAwesome';
+$global-overlay-icon-color      : #fff;
+$global-overlay-icon-width      : ($whitespace*3);
+$global-overlay-icon-height     : ($whitespace*3);
+$global-overlay-icon-font-size    : $font-size-m;
+$global-overlay-icon-border     : 2px solid $global-overlay-icon-color;
+$global-overlay-icon-border-radius  : 100%;
