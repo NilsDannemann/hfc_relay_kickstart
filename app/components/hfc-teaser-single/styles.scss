@@ -31,6 +31,8 @@
   }
 
   .teaser-title {
+    font: bold $font-size-m $font-family-headline;
+    color: $color-headline;
     padding: ($whitespace*0.75) $whitespace;
     margin-bottom: 0;
     border-bottom: 2px solid $color-brand;
