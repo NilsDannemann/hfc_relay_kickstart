@@ -1,0 +1,18 @@
+& {
+  @include flexbox($align: stretch);
+  border-top: $border;
+  border-bottom: $border;
+  margin-top: $whitespace;
+  margin-bottom: $whitespace;
+
+  .app-nav-components-item {
+    padding: ($whitespace*0.75) $whitespace;
+    text-align: center;
+    flex: 1;
+
+    &:hover,
+    &.active {
+      background: $color-grey;
+    }
+  }
+}

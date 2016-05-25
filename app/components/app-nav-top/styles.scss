@@ -8,7 +8,8 @@
   .nav-top-item {
     padding: ($whitespace*0.75) $whitespace;
 
-    &:hover {
+    &:hover,
+    &.active {
       background: $color-grey;
     }
   }
