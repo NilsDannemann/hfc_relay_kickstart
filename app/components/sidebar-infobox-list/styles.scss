@@ -1,11 +1,11 @@
 &{
 
-  .sidebar-list-container{
+  .sidebar-infobox-list-container{
     padding: 0;
     list-style-type: none;
   }
 
-  .sidebar-list-item{
+  .sidebar-infobox-list-item{
     padding: ($whitespace*0.25) 0;
 
     &:not(:last-child){border-bottom: $border;}

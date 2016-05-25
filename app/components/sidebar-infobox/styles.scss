@@ -3,15 +3,15 @@
   padding: $whitespace;
   margin-bottom: $whitespace;
 
-  .hfc-infobox-title {}
+  .sidebar-infobox-title {}
 
-  .hfc-infobox-image{
-    margin-bottom: ($whitespace*0.5);
+  .sidebar-infobox-image{
+    margin-bottom: $whitespace;
   }
 
-  .hfc-infobox-content {}
+  .sidebar-infobox-content {}
 
-  .hfc-infobox-link {
+  .sidebar-infobox-link {
 
     &:before{
       content: '\f0da';
