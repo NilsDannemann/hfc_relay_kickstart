@@ -6,7 +6,7 @@
     @include column(1/2, $gutter: true);
     @include respond-above(l) {@include column(1/3, $gutter: true);}
     @include respond-above(xl) {@include column(1/6, $gutter: true);}
-    @include overlay($icon: '\f002');
+    @include overlay($icon: 'fa-search');
     height: 150px;
     background-repeat: no-repeat;
     background-size: cover;

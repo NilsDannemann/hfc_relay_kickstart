@@ -57,7 +57,7 @@
     @include respond-below(l) {border: 0;}
   }
   .download-link{
-    @include overlay($icon: '\f019', $icon-font-size: m, $icon-width: m, $icon-height: m);
+    @include overlay($icon: 'fa-download', $icon-width: s, $icon-height: s);
     align-self: stretch;
   }
 }
