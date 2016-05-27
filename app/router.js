@@ -15,6 +15,7 @@ Router.map(function() {
     this.route('page-hfc-gallery');
     this.route('page-hfc-content');
     this.route('page-hfc-forms');
+    this.route('page-hfc-galleries');
   });
 });
 
