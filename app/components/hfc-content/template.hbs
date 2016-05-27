@@ -1,40 +1,31 @@
 <div class="hfc-content-container">
-
   {{!-- Title --}}
   {{#if title}}
     <h2 class="hfc-content-title">{{title}}</h2>
   {{/if}}
-
   {{!-- Image --}}
   {{#if image}}
     {{#if (eq image-position "right")}}
-      <div class="hfc-content-image hfc-content-image-right">
-        <img src="images/{{image}}" alt="Image">
+      <a href="images/{{image}}" class="hfc-content-image hfc-content-image-right" style="background-image: url(images/{{image}})">
         {{#if image-subtitle}}
           <span class="hfc-content-image-subtitle">{{image-subtitle}}</span>
         {{/if}}
-      </div>
+      </a>
     {{else}}
-      <div class="hfc-content-image hfc-content-image-left">
-        <img src="images/{{image}}" alt="Image">
+      <a href="images/{{image}}" class="hfc-content-image hfc-content-image-left" style="background-image: url(images/{{image}})">
         {{#if image-subtitle}}
           <span class="hfc-content-image-subtitle">{{image-subtitle}}</span>
         {{/if}}
-      </div>
+      </a>
     {{/if}}
   {{/if}}
-
   {{!-- Content --}}
   <div class="hfc-content-content">
     {{#if content}}
         <p>{{content}}</p>
     {{else}}
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit. Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit. Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit. </p>
     {{/if}}
-
   </div>
 </div>
-
-<hr>
-
