@@ -33,6 +33,7 @@
   }
 
   .download-content {
+    width: 100%; //For: short content bug
     padding: ($whitespace*0.75) $whitespace;
     font-size: $font-size-s;
     border-top: $border;

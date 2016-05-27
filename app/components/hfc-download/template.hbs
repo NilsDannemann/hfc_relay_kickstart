@@ -3,12 +3,22 @@
     <h4 class="download-title">
       <span class="download-type">PDF</span>Titel des Downloads
     </h4>
-    {{#if text}}
-      <p class="download-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat exercitationem illo commodi debitis, autem, dignissimos quo minus consequuntur id dolor deserunt cumque dolorem.</p>
+    {{!-- Content --}}
+    {{#if content}}
+      {{#if (eq content "lorem")}}
+        <p class="download-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat exercitationem illo commodi debitis, autem, dignissimos quo minus consequuntur id dolor deserunt cumque dolorem.</p>
+      {{else}}
+        <p class="download-content">{{content}}</p>
+      {{/if}}
     {{/if}}
   </div>
   <div class="download-controls">
     <div class="download-size">125kb</div>
-    <a class="download-link" href="other/placeholder.pdf" target="_blank">Download</a>
+    {{!-- Link --}}
+    {{#if link}}
+      <a class="download-link" href="{{link}}" target="_blank">Download</a>
+    {{else}}
+      <a class="download-link" href="other/placeholder.pdf" target="_blank">Download</a>
+    {{/if}}
   </div>
 </div>
