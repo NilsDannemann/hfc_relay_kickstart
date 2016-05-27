@@ -13,8 +13,8 @@ Router.map(function() {
     this.route('page-hfc-teaser-triple');
     this.route('page-hfc-download');
     this.route('page-hfc-gallery');
-    this.route('page-hfc-contact');
     this.route('page-hfc-content');
+    this.route('page-hfc-forms');
   });
 });
 

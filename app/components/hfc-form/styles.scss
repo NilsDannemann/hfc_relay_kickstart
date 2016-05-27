@@ -3,28 +3,28 @@
   box-shadow: $box-shadow;
   border-left: 2px solid $color-brand;
 
-  .hfc-contact {
+  .hfc-form {
     @include flexbox();
     margin-bottom: $whitespace;
   }
-  .hfc-contact-label {
+  .hfc-form-label {
     @include column(100px);
     color: $color-headline;
     font-family: $font-family-headline;
     font-weight: bold;
     margin-bottom: ($whitespace*0.5);
   }
-  .hfc-contact-input {
+  .hfc-form-input {
     @include column();
     font-size: $font-size;
     border: $border;
     padding: ($whitespace*0.5) ($whitespace*0.5);
     outline: none;
   }
-  .hfc-contact-controls {
+  .hfc-form-controls {
     @include flexbox($justify: flex-end);
   }
-  .hfc-contact-submit {
+  .hfc-form-submit {
     @include button();
     font-size: $font-size;
   }
