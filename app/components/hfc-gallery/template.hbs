@@ -1,6 +1,35 @@
-<a href="#" class="hfc-gallery-image" style="background-image: url('images/placeholder1.png')"></a>
-<a href="#" class="hfc-gallery-image" style="background-image: url('images/placeholder2.png')"></a>
-<a href="#" class="hfc-gallery-image" style="background-image: url('images/placeholder3.png')"></a>
-<a href="#" class="hfc-gallery-image" style="background-image: url('images/placeholder1.png')"></a>
-<a href="#" class="hfc-gallery-image" style="background-image: url('images/placeholder2.png')"></a>
-<a href="#" class="hfc-gallery-image" style="background-image: url('images/placeholder3.png')"></a>
+{{#if image1}}
+  <a href="images/{{image1}}" class="hfc-gallery-image" style="background-image: url(images/{{image1}})"></a>
+{{else}}
+  <a href="images/placeholder1.png}" class="hfc-gallery-image" style="background-image: url(images/placeholder1.png)"></a>
+{{/if}}
+
+{{#if image2}}
+  <a href="images/{{image2}}" class="hfc-gallery-image" style="background-image: url(images/{{image2}})"></a>
+{{else}}
+  <a href="images/placeholder2.png" class="hfc-gallery-image" style="background-image: url(images/placeholder2.png)"></a>
+{{/if}}
+
+{{#if image3}}
+  <a href="images/{{image3}}" class="hfc-gallery-image" style="background-image: url(images/{{image3}})"></a>
+{{else}}
+  <a href="images/placeholder3.png" class="hfc-gallery-image" style="background-image: url(images/placeholder3.png)"></a>
+{{/if}}
+
+{{#if image4}}
+  <a href="images/{{image4}}" class="hfc-gallery-image" style="background-image: url(images/{{image4}})"></a>
+{{else}}
+  <a href="images/placeholder1.png}" class="hfc-gallery-image" style="background-image: url(images/placeholder1.png)"></a>
+{{/if}}
+
+{{#if image5}}
+  <a href="images/{{image5}}" class="hfc-gallery-image" style="background-image: url(images/{{image5}})"></a>
+{{else}}
+  <a href="images/placeholder2.png" class="hfc-gallery-image" style="background-image: url(images/placeholder2.png)"></a>
+{{/if}}
+
+{{#if image6}}
+  <a href="images/{{image6}}" class="hfc-gallery-image" style="background-image: url(images/{{image6}})"></a>
+{{else}}
+  <a href="images/placeholder3.png" class="hfc-gallery-image" style="background-image: url(images/placeholder3.png)"></a>
+{{/if}}
