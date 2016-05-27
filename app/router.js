@@ -11,7 +11,7 @@ Router.map(function() {
     this.route('page-hfc-teaser-single');
     this.route('page-hfc-teaser-double');
     this.route('page-hfc-teaser-triple');
-    this.route('page-hfc-download');
+    this.route('page-hfc-downloads');
     this.route('page-hfc-gallery');
     this.route('page-hfc-content');
     this.route('page-hfc-forms');
