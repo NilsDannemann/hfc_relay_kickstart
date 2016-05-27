@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:page-hfc-components/page-hfc-text-image', 'Unit | Route | page hfc components/page hfc text image', {
+moduleFor('route:page-hfc-components/page-hfc-content', 'Unit | Route | page hfc components/page hfc content', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
