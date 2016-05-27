@@ -6,14 +6,14 @@
     &:not(:last-child) {margin-bottom: $whitespace;}
   }
 
-  .hfc-content-headline {
+  .hfc-content-title {
     @include column(1/1);
     margin-bottom: $whitespace;
   }
 
   .hfc-content-image {
     @include column(1/1, $gutter: true);
-    @include respond-above(l) {@include column(350px);}
+    @include respond-above(l) {@include column(300px);}
     &.hfc-content-image-left {
       @include respond-above(l) {
         margin-right: $whitespace;
@@ -36,7 +36,7 @@
     }
   }
 
-  .hfc-content-text {
+  .hfc-content-content {
     @include column(1/1);
     @include respond-above(m) {
       @include column();

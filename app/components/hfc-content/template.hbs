@@ -1,51 +1,40 @@
 <div class="hfc-content-container">
-  <h2>Eine Überschrift</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime molestiae quasi molestias quia, quas ratione. In odit, expedita laboriosam! Dignissimos velit nesciunt possimus, dolores pariatur nulla dolor libero consequuntur, aliquam.</p>
-  <div class="hfc-content-image hfc-content-image-left">
-    <img src="images/placeholder1.png" alt="Image">
-    <span class="hfc-content-image-subtitle">Eine Bildunterschrift</span>
-  </div>
-  <div class="hfc-content-text">
-    <h3>Eine weitere Überschrift</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis.</p>
-    <h3>Eine weitere Überschrift</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit. Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit.</p>
+
+  {{!-- Title --}}
+  {{#if title}}
+    <h2 class="hfc-content-title">{{title}}</h2>
+  {{/if}}
+
+  {{!-- Image --}}
+  {{#if image}}
+    {{#if (eq image-position "right")}}
+      <div class="hfc-content-image hfc-content-image-right">
+        <img src="images/{{image}}" alt="Image">
+        {{#if image-subtitle}}
+          <span class="hfc-content-image-subtitle">{{image-subtitle}}</span>
+        {{/if}}
+      </div>
+    {{else}}
+      <div class="hfc-content-image hfc-content-image-left">
+        <img src="images/{{image}}" alt="Image">
+        {{#if image-subtitle}}
+          <span class="hfc-content-image-subtitle">{{image-subtitle}}</span>
+        {{/if}}
+      </div>
+    {{/if}}
+  {{/if}}
+
+  {{!-- Content --}}
+  <div class="hfc-content-content">
+    {{#if content}}
+        <p>{{content}}</p>
+    {{else}}
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit. Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit.</p>
+    {{/if}}
+
   </div>
 </div>
 
 <hr>
 
-<div class="hfc-content-container">
-  <h2>Eine Überschrift</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime molestiae quasi molestias quia, quas ratione. In odit, expedita laboriosam! Dignissimos velit nesciunt possimus, dolores pariatur nulla dolor libero consequuntur, aliquam.</p>
-  <div class="hfc-content-image hfc-content-image-right">
-    <img src="images/placeholder2.png" alt="Image">
-    <span class="hfc-content-image-subtitle">Eine Bildunterschrift</span>
-  </div>
-  <div class="hfc-content-text">
-    <h3>Eine weitere Überschrift</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis.</p>
-    <h3>Eine weitere Überschrift</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit. Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit.</p>
-  </div>
-</div>
-
-<hr>
-
-<div class="hfc-content-container">
-  <h2>Eine Überschrift</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime molestiae quasi molestias quia, quas ratione. In odit, expedita laboriosam! Dignissimos velit nesciunt possimus, dolores pariatur nulla dolor libero consequuntur, aliquam.</p>
-  <div class="hfc-content-image hfc-content-image-left">
-    <img src="images/placeholder3.png" alt="Image">
-    <span class="hfc-content-image-subtitle">Eine Bildunterschrift</span>
-  </div>
-  <div class="hfc-content-text">
-    <h3>Eine weitere Überschrift</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis.</p>
-    <h3>Eine weitere Überschrift</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis beatae odio consequuntur recusandae natus odit ad, explicabo saepe neque blanditiis provident modi sed necessitatibus, incidunt! Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit. Molestiae nobis deleniti sed dolores dignissimos odio earum officia, assumenda praesentium debitis consequuntur officiis nemo iure eum maxime repudiandae quibusdam explicabo temporibus illum, quasi quos sit.</p>
-  </div>
-</div>
