@@ -9,6 +9,8 @@ export default Ember.Component.extend({
       loop: true,
       grabCursor: true,
       keyboardControl: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
 
       // Lazy Loading
       preloadImages: false,

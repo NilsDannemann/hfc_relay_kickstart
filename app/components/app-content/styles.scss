@@ -10,8 +10,11 @@
   }
 
   .app-content-inner {
+    @include flexbox(); //For: use column() mixin without extra wrappers
     @include column($behavior: stacking);
     padding: $whitespace;
+
+    & > * {width: 100%;} //For: use column() mixin without extra wrappers
   }
 
   .app-content-aside {

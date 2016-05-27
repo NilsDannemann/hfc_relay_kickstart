@@ -1,26 +1,20 @@
 <section class="teaser-container">
-  <a href="#" class="teaser-title">Teaser Title</a>
-  <a href="#" class="teaser-image" style="background-image: url('images/placeholder1.png')"></a>
+  {{!-- Title --}}
+  <a href="{{link}}" class="teaser-title">{{#if title}}{{title}}{{else}}Teaser Title{{/if}}</a>
+  {{!-- Image --}}
+  {{#if image}}
+    <a href="{{link}}" class="teaser-image" style="background-image: url(images/{{image}})"></a>
+  {{else}}
+    <a href="{{link}}" class="teaser-image" style="background-image: url(images/placeholder1.png)"></a>
+  {{/if}}
+  {{!-- Content --}}
   <p class="teaser-content">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat exercitationem illo commodi debitis.
+    {{#if content}}
+      {{content}}
+    {{else}}
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat illo commodi debitis.
+    {{/if}}
   </p>
-  <a href="#" class="teaser-controls">Weiterlesen</a>
-</section>
-
-<section class="teaser-container">
-  <a href="#" class="teaser-title">Teaser Title</a>
-  <a href="#" class="teaser-image" style="background-image: url('images/placeholder2.png')"></a>
-  <p class="teaser-content">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat exercitationem illo commodi debitis.
-  </p>
-  <a href="#" class="teaser-controls">Weiterlesen</a>
-</section>
-
-<section class="teaser-container">
-  <a href="#" class="teaser-title">Teaser Title</a>
-  <a href="#" class="teaser-image" style="background-image: url('images/placeholder3.png')"></a>
-  <p class="teaser-content">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat exercitationem illo commodi debitis.
-  </p>
-  <a href="#" class="teaser-controls">Weiterlesen</a>
+  {{!-- Link --}}
+  <a href="{{link}}" class="teaser-link">Weiterlesen</a>
 </section>
