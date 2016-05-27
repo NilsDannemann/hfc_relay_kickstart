@@ -1,7 +1,9 @@
 <div class="download-container">
   <div class="download-container-inner">
+    {{!-- Title --}}
     <h4 class="download-title">
-      <span class="download-type">PDF</span>Titel des Downloads
+      <span class="download-type">{{#if type}}{{type}}{{else}}PDF{{/if}}</span>
+      {{#if title}}{{title}}{{else}}Titel des Downloads{{/if}}
     </h4>
     {{!-- Content --}}
     {{#if content}}
@@ -13,7 +15,7 @@
     {{/if}}
   </div>
   <div class="download-controls">
-    <div class="download-size">125kb</div>
+    <div class="download-size">{{#if size}}{{size}}{{else}}125kb{{/if}}</div>
     {{!-- Link --}}
     {{#if link}}
       <a class="download-link" href="{{link}}" target="_blank">Download</a>
