@@ -18,6 +18,7 @@ Router.map(function() {
     this.route('page-hfc-galleries');
   });
   this.route('page-news');
+  this.route('page-contact');
 });
 
 export default Router;
