@@ -6,13 +6,13 @@
   {{!-- Image --}}
   {{#if image}}
     {{#if (eq image-position "right")}}
-      <a href="images/{{image}}" class="hfc-content-image hfc-content-image-right" style="background-image: url(images/{{image}})">
+      <a href="{{image}}" class="hfc-content-image hfc-content-image-right" style="background-image: url({{image}})">
         {{#if image-subtitle}}
           <span class="hfc-content-image-subtitle">{{image-subtitle}}</span>
         {{/if}}
       </a>
     {{else}}
-      <a href="images/{{image}}" class="hfc-content-image hfc-content-image-left" style="background-image: url(images/{{image}})">
+      <a href="{{image}}" class="hfc-content-image hfc-content-image-left" style="background-image: url({{image}})">
         {{#if image-subtitle}}
           <span class="hfc-content-image-subtitle">{{image-subtitle}}</span>
         {{/if}}
