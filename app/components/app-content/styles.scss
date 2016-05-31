@@ -2,7 +2,7 @@
 
   .app-content-container {
     @include container();
-    @include flexbox($align: start);
+    @include flexbox($align: stretch);
     border: $border;
     background: #fff;
 
@@ -10,11 +10,8 @@
   }
 
   .app-content-inner {
-    @include flexbox(); //For: use column() mixin without extra wrappers
     @include column($behavior: stacking);
     padding: $whitespace;
-
-    & > * {width: 100%;} //For: use column() mixin without extra wrappers
   }
 
   .app-content-aside {

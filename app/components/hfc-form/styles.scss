@@ -3,12 +3,15 @@
   box-shadow: $box-shadow;
   border-left: 2px solid $color-brand;
 
-  .hfc-form {
+  .hfc-form-row {
     @include flexbox();
-    margin-bottom: $whitespace;
+
+    &:not(:last-child) {
+      margin-bottom: $whitespace;
+    }
   }
   .hfc-form-label {
-    @include column(100px);
+    @include column(130px);
     color: $color-headline;
     font-family: $font-family-headline;
     font-weight: bold;
