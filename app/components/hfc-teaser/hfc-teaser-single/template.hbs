@@ -1,0 +1,22 @@
+<section class="teaser-container">
+  {{!-- Image --}}
+  {{#if image}}
+    <a href="{{link}}" class="teaser-image" style="background-image: url({{image}})"></a>
+  {{else}}
+    <a href="{{link}}" class="teaser-image" style="background-image: url(images/placeholder1.png)"></a>
+  {{/if}}
+  <div class="teaser-container-inner">
+    {{!-- Title --}}
+    <a href="{{link}}" class="teaser-title">{{#if title}}{{title}}{{else}}Teaser Title{{/if}}</a>
+    {{!-- Content --}}
+    <p class="teaser-content">
+      {{#if content}}
+        {{content}}
+      {{else}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat exercitationem illo commodi debitis, autem, dignissimos quo minus con.
+      {{/if}}
+    </p>
+    {{!-- Link --}}
+    <a href="{{link}}" class="teaser-link">Weiterlesen</a>
+  </div>
+</section>
