@@ -3,27 +3,6 @@
   box-shadow: $box-shadow;
   border-left: 2px solid $color-brand;
 
-  .hfc-form-row {
-    @include flexbox();
-
-    &:not(:last-child) {
-      margin-bottom: $whitespace;
-    }
-  }
-  .hfc-form-label {
-    @include column(130px);
-    color: $color-headline;
-    font-family: $font-family-headline;
-    font-weight: bold;
-    margin-bottom: ($whitespace*0.5);
-  }
-  .hfc-form-input {
-    @include column();
-    font-size: $font-size;
-    border: $border;
-    padding: ($whitespace*0.5) ($whitespace*0.5);
-    outline: none;
-  }
   .hfc-form-controls {
     @include flexbox($justify: flex-end);
   }
