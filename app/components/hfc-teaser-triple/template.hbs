@@ -18,3 +18,47 @@
   {{!-- Link --}}
   <a href="{{link}}" class="teaser-link">Weiterlesen</a>
 </section>
+
+
+<section class="teaser-container">
+  {{!-- Title --}}
+  <a href="{{link}}" class="teaser-title">{{#if title}}{{title}}{{else}}Teaser Title{{/if}}</a>
+  {{!-- Image --}}
+  {{#if image}}
+    <a href="{{link}}" class="teaser-image" style="background-image: url({{image}})"></a>
+  {{else}}
+    <a href="{{link}}" class="teaser-image" style="background-image: url(images/placeholder1.png)"></a>
+  {{/if}}
+  {{!-- Content --}}
+  <p class="teaser-content">
+    {{#if content}}
+      {{content}}
+    {{else}}
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat illo commodi debitis.
+    {{/if}}
+  </p>
+  {{!-- Link --}}
+  <a href="{{link}}" class="teaser-link">Weiterlesen</a>
+</section>
+
+
+<section class="teaser-container">
+  {{!-- Title --}}
+  <a href="{{link}}" class="teaser-title">{{#if title}}{{title}}{{else}}Teaser Title{{/if}}</a>
+  {{!-- Image --}}
+  {{#if image}}
+    <a href="{{link}}" class="teaser-image" style="background-image: url({{image}})"></a>
+  {{else}}
+    <a href="{{link}}" class="teaser-image" style="background-image: url(images/placeholder1.png)"></a>
+  {{/if}}
+  {{!-- Content --}}
+  <p class="teaser-content">
+    {{#if content}}
+      {{content}}
+    {{else}}
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat illo commodi debitis.
+    {{/if}}
+  </p>
+  {{!-- Link --}}
+  <a href="{{link}}" class="teaser-link">Weiterlesen</a>
+</section>
