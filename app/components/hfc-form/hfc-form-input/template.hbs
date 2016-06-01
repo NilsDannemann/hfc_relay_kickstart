@@ -1,6 +1,43 @@
-<label class="hfc-form-label">{{#if label}}{{label}}{{else}}Label{{/if}}</label>
-{{#if placeholder}}
-  <input class="hfc-form-input" type="text" placeholder="{{placeholder}}" size="1"/>
+{{#if type}}
+
+  {{!-- INPUT --}}
+  {{#if (eq type "text")}}
+    <label class="hfc-form-label">{{#if label}}{{label}}{{else}}Label{{/if}}</label>
+    {{#if placeholder}}
+      <input class="hfc-form-input" type="text" placeholder="{{placeholder}}" size="1"/>
+    {{else}}
+      <input class="hfc-form-input" type="text" placeholder="placeholder" size="1"/>
+    {{/if}}
+  {{/if}}
+
+  {{!-- TEXTAREA --}}
+  {{#if (eq type "textarea")}}
+    <label class="hfc-form-label">{{#if label}}{{label}}{{else}}Label{{/if}}</label>
+    {{#if placeholder}}
+      <textarea class="hfc-form-input" type="text" placeholder="{{placeholder}}" rows="10"/>
+    {{else}}
+      <textarea class="hfc-form-input" type="text" placeholder="placeholder" rows="10"/>
+    {{/if}}
+  {{/if}}
+
+  {{!-- CHECKBOX --}}
+  {{#if (eq type "checkbox")}}
+    <label class="hfc-form-label-checkbox">
+      <input class="hfc-form-checkbox" type="checkbox"/>
+      {{#if label}}{{label}}{{else}}Label{{/if}}
+    </label>
+  {{/if}}
+
+  {{!-- RADIOBUTTON --}}
+  {{#if (eq type "radio")}}
+    <label class="hfc-form-label-radiobutton">
+      <input class="hfc-form-radiobutton" type="radio" name="radiogroup"/>
+      {{#if label}}{{label}}{{else}}Label{{/if}}
+    </label>
+  {{/if}}
+
 {{else}}
-  <input class="hfc-form-input" type="text" placeholder="placeholder" size="1"/>
+
+  Please specify an input type (e.g. type="text")
+
 {{/if}}

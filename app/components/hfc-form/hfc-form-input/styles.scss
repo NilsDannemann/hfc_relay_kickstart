@@ -1,10 +1,8 @@
 &{
   @include flexbox();
-  &:not(:last-child) {
-    margin-bottom: $whitespace;
-  }
+  &:not(:last-child) {margin-bottom: ($whitespace*0.5);}
 
-  // LABEL
+  // INPUT
   .hfc-form-label {
     @include column(130px);
     color: $color-headline;
@@ -12,13 +10,29 @@
     font-weight: bold;
     margin-bottom: ($whitespace*0.5);
   }
-
-  // INPUT
   .hfc-form-input {
     @include column();
     font-size: $font-size;
     border: $border;
     padding: ($whitespace*0.5) ($whitespace*0.5);
     outline: none;
+  }
+
+  // CHECKBOX
+  .hfc-form-label-checkbox {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .hfc-form-checkbox {
+    @include checkbox();
+  }
+
+  // RADIOBUTTON
+  .hfc-form-label-radiobutton {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .hfc-form-radiobutton {
+    @include radiobutton();
   }
 }
