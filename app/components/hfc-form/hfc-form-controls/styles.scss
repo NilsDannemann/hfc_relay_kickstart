@@ -1,0 +1,8 @@
+&{
+  @include flexbox($justify: flex-end);
+
+  .hfc-form-submit {
+    @include button();
+    font-size: $font-size;
+  }
+}

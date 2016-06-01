@@ -2,12 +2,4 @@
   padding: $whitespace;
   box-shadow: $box-shadow;
   border-left: 2px solid $color-brand;
-
-  .hfc-form-controls {
-    @include flexbox($justify: flex-end);
-  }
-  .hfc-form-submit {
-    @include button();
-    font-size: $font-size;
-  }
 }
