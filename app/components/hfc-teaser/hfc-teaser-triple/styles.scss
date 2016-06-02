@@ -8,6 +8,7 @@
 
   .teaser-container {
     @include flexbox($direction: column, $align: stretch); // For: No-Img Fallback
+    @include column(1/1); // For: Very short content (e.g. one word)
     box-shadow: $box-shadow;
   }
 

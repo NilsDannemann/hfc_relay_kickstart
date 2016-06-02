@@ -1,22 +1,27 @@
 <section class="teaser-container">
+
   {{!-- Title --}}
   {{#if _title}}
-    <a href="{{link}}" class="teaser-title">{{_title}}</a>
+    <a href="{{_link}}" class="teaser-title">{{_title}}</a>
   {{/if}}
+
   {{!-- Image --}}
-  {{#if image}}
-    <a href="{{link}}" class="teaser-image" style="background-image: url({{image}})"></a>
+  {{#if _image}}
+    <a href="{{_link}}" class="teaser-image" style="background-image: url({{_image}})"></a>
   {{else}}
-    <a href="{{link}}" class="teaser-image" style="background-image: url(images/placeholder1.png)"></a>
+    <a href="{{_link}}" class="teaser-image" style="background-image: url(images/placeholder1.png)"></a>
   {{/if}}
+
   {{!-- Content --}}
   <p class="teaser-content">
-    {{#if content}}
-      {{content}}
-    {{else}}
+  {{#if _content}}
+      {{_content}}
+  {{else}}
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nam officia quam modi, facilis fugiat illo commodi debitis.
-    {{/if}}
+  {{/if}}
   </p>
+
   {{!-- Link --}}
-  <a href="{{link}}" class="teaser-link">Weiterlesen</a>
+  <a href="{{_link}}" class="teaser-link">Weiterlesen</a>
+
 </section>
