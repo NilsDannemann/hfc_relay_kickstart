@@ -8,6 +8,8 @@
     @include respond-above(xl) {@include column(1/6, $gutter: true);}
     @include overlay($icon: 'fa-search');
     height: 150px;
+    border: 5px solid #fff;
+    box-shadow: $box-shadow;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

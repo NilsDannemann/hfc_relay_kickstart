@@ -16,6 +16,8 @@
     @include overlay($icon: 'fa-search');
     min-height: 125px;
     height: 25vh;
+    border: 5px solid #fff;
+    box-shadow: $box-shadow;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -28,7 +30,7 @@
     }
 
     .hfc-content-image-subtitle {
-      @include position(absolute, $bottom: (-$whitespace), $left:0);
+      @include position(absolute, $bottom: (-$whitespace*1.5), $left:0);
       font-size: $font-size-s;
       color: darken($color-grey, 25%);
     }
