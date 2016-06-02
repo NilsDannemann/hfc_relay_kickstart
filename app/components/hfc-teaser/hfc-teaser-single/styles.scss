@@ -4,7 +4,7 @@
   @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
 
   .teaser-container {
-    @include flexbox();
+    @include flexbox($align: stretch);
     box-shadow: $box-shadow;
   }
 
