@@ -13,7 +13,7 @@ Clone this Repo as a new Project (curl).<br>
 <!-- ####2. Install Dependencies<br> 
 npm & bower install -->
 
-####3. Rename Project<br> 
+####2. Rename Project<br> 
 - Rename Folder <br> 
 
 - Change Project Name in package.json & bower.json<br> 
@@ -33,7 +33,7 @@ npm & bower install -->
     - Overwrite tests/index.html? (Y)
 
 
-####4. Start Working<br> 
+####3. Start Working<br> 
 ember s
 
 
