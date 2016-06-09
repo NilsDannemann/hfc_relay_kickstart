@@ -16,6 +16,7 @@
     @include respond-above(m) {display: none;}
     font-style: normal;
     font-size: 21px;
+    color: #fff;
     z-index: 1000;
 
     &:before{
