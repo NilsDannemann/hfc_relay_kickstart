@@ -16,7 +16,6 @@
 
   .app-content-aside {
     @include column($width-sidebar, $behavior: stacking);
-    border-left: $border;
     padding: $whitespace;
   }
 }
