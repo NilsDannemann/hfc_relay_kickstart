@@ -6,6 +6,7 @@ const { computed, on } = Ember;
 
 export default Ember.Component.extend({
   page: null,
+
   _title: computed('page.title', 'title', function(){
     return this.get('title') || this.get('page.title') || '';
   }),
@@ -18,6 +19,10 @@ export default Ember.Component.extend({
   _link: computed('page.link', 'link', function(){
     return this.get('link') || this.get('page.link') || '';
   }),
+
+  backgroundImage: function() {
+    return `background-image: url('assets/${this.get('_image')}');`;
+  }.property('_image'),
 
   usePrototypeData: on('init', function(){
     if(ENV.usePrototypeData){
