@@ -20,8 +20,9 @@
     position: relative;
   }
 
+  /* =======================================*/
   /* SWIPER SLIDER - CONTENT
-  /* =====================*/
+  /* =======================================*/
   .swiper-slide-content{
     @include position(absolute, $bottom: 0px, $left: 0px, $right: 0);
     padding: $whitespace;
@@ -29,36 +30,43 @@
   .swiper-slide-headline{}
   .swiper-slide-text{}
 
+  /* =======================================*/
   /* SWIPER SLIDER - NAVIGATION
-  /* ========================*/
+  /* =======================================*/
   .swiper-button-next,
   .swiper-button-prev {
-    @include flexbox($align: center);
+    @include flexbox($align: center, $justify: center);
     height: ($whitespace*3);
     width: ($whitespace*3);
-    border: $border;
-    background: #fff;
-    &:before {
-      font-family: 'FontAwesome';
-      color: $color-brand;
-    }
+    background-image: none; //For: override swiper defaults
   }
 
   .swiper-button-next{
-    margin-right: (-$whitespace*2);
-    padding-left: ($whitespace*0.55);
-    &:before{content: '\f054';}
+    right: 0px;
+    @include icon('fa-chevron-right', $font-size: 18px);
   }
 
   .swiper-button-prev{
-    margin-left: (-$whitespace*2);
-    padding-left: ($whitespace*1.85);
-    &:before{content: '\f053';}
+    left: 0px;
+    @include icon('fa-chevron-left', $font-size: 18px);
   }
 
+  /* =======================================*/
   /* SWIPER SLIDER - PAGINATION
-  /* ========================*/
-  .swiper-pagination-bullet-active {
-    background: $color-brand;
+  /* =======================================*/
+  .swiper-pagination {
+    @include flexbox($justify: center, $align: center);
+    height: ($whitespace*3);
+    bottom: 0;
+  }
+  .swiper-pagination-bullets {}
+  .swiper-pagination-bullet-active {background: $color-brand;}
+
+  /* =======================================*/
+  /* SWIPER SLIDER - PRELOADER
+  /* =======================================*/
+  .swiper-lazy-preloader {
+    animation: none !important; //For: replaced with app-loader component instead
+    &:after {display: none;} //For: replaced with app-loader component instead
   }
 }
