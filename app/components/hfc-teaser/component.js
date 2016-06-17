@@ -2,21 +2,19 @@ import Ember from 'ember';
 import ENV from '../../config/environment';
 import prototypeData from './prototype-data';
 
-const { computed, on } = Ember;
-
 export default Ember.Component.extend({
   page: null,
 
-  _title: computed('page.title', 'title', function(){
+  _title: Ember.computed('page.title', 'title', function(){
     return this.get('title') || this.get('page.title') || '';
   }),
-  _image: computed('page.image', 'image', function(){
+  _image: Ember.computed('page.image', 'image', function(){
     return this.get('image') || this.get('page.image') || '';
   }),
-  _content: computed('page.content', 'content', function(){
+  _content: Ember.computed('page.content', 'content', function(){
     return this.get('content') || this.get('page.content') || '';
   }),
-  _link: computed('page.link', 'link', function(){
+  _link: Ember.computed('page.link', 'link', function(){
     return this.get('link') || this.get('page.link') || '';
   }),
 
@@ -24,7 +22,7 @@ export default Ember.Component.extend({
     return `background-image: url('assets/${this.get('_image')}');`;
   }.property('_image'),
 
-  usePrototypeData: on('init', function(){
+  usePrototypeData: Ember.on('init', function(){
     if(ENV.usePrototypeData){
       let defaults = {};
       if(this.get('title')){
