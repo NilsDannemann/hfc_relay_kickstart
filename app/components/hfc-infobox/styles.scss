@@ -1,0 +1,20 @@
+&{
+  border: $border;
+  padding: $whitespace;
+  margin-bottom: $whitespace;
+
+  .hfc-infobox-title {
+    border-bottom: $border;
+    padding-bottom: $whitespace;
+  }
+
+  .hfc-infobox-image{
+    margin-bottom: $whitespace;
+  }
+
+  .hfc-infobox-content {}
+
+  .hfc-infobox-link {
+    @include icon('fa-caret-right', $margin: 0 ($whitespace*0.5) 0 0);
+  }
+}
