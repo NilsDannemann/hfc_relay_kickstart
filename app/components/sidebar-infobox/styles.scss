@@ -3,7 +3,10 @@
   padding: $whitespace;
   margin-bottom: $whitespace;
 
-  .sidebar-infobox-title {}
+  .sidebar-infobox-title {
+    border-bottom: $border;
+    padding-bottom: $whitespace;
+  }
 
   .sidebar-infobox-image{
     margin-bottom: $whitespace;
