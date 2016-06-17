@@ -1,44 +1,5 @@
-<div class="swiper-container">
-
-    <!-- Wrapper -->
-    <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div data-background="assets/images/slider_img1.png" class="swiper-slide swiper-lazy">
-            {{app-loader class="swiper-lazy-preloader"}}
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div data-background="assets/images/slider_img2.png" class="swiper-slide swiper-lazy">
-            {{app-loader class="swiper-lazy-preloader"}}
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div data-background="assets/images/slider_img3.png" class="swiper-slide swiper-lazy">
-            {{app-loader class="swiper-lazy-preloader"}}
-          </div>
-        </div>
-        <!-- Slide 4 -->
-        <div class="swiper-slide">
-          <div data-background="assets/images/slider_img4.png" class="swiper-slide swiper-lazy">
-            <div class="swiper-slide-content">
-              <h1 class="swiper-slide-headline">Headline</h1>
-              <p class="swiper-slide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            {{app-loader class="swiper-lazy-preloader"}}
-          </div>
-        </div>
-
-    </div>
-
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- Navigation Buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-</div>
+{{#app-hero.app-hero-slider pagination=true navigation=true}}
+  {{app-hero.app-hero-slide image="images/slider_img1.png" title="HFC Relay Kickstart" content="lorem"}}
+  {{app-hero.app-hero-slide image="images/slider_img2.png"}}
+  {{app-hero.app-hero-slide image="images/slider_img3.png"}}
+{{/app-hero.app-hero-slider}}

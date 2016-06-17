@@ -1,0 +1,17 @@
+<div data-background="assets/{{image}}" class="swiper-slide swiper-lazy">
+  {{#if (or title content)}}
+    <div class="swiper-slide-content-wrapper">
+      {{#if title}}
+        <h1 class="swiper-slide-title">{{title}}</h1>
+      {{/if}}
+      {{#if content}}
+        {{#if (eq content "lorem")}}
+          <p class="swiper-slide-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, facilis.</p>
+        {{else}}
+          <p class="swiper-slide-content">{{content}}</p>
+        {{/if}}
+      {{/if}}
+    </div>
+  {{/if}}
+  {{app-loader class="swiper-lazy-preloader"}}
+</div>

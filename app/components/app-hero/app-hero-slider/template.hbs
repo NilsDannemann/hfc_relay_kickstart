@@ -1,0 +1,15 @@
+<!-- Wrapper -->
+<div class="swiper-wrapper">
+    {{yield}}
+</div>
+
+<!-- Pagination -->
+{{#if pagination}}
+  <div class="swiper-pagination"></div>
+{{/if}}
+
+<!-- Navigation Buttons -->
+{{#if navigation}}
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+{{/if}}
