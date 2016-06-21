@@ -46,9 +46,9 @@
     @include transition();
     @include position(fixed, $top: 0, $right: 0);
     height: 100%;
-    width: 350px;
+    width: 280px;
     background: $color-brand;
-    transform: translateX(370px);
+    transform: translateX(300px);
     overflow: scroll; //For: mobile-nav scrollable when higher than viewport
     &.is-open{transform: translateX(0px);}
 

@@ -4,25 +4,29 @@ export default Ember.Component.extend({
   classNames: 'swiper-container',
 
   didInsertElement() {
-    var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-      grabCursor: true,
-      keyboardControl: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
+    Ember.run.schedule("afterRender",this,function() {
 
-      // Lazy Loading
-      preloadImages: false,
-      lazyLoading: true,
+      let mySwiper = new Swiper (this.$()[0], {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        grabCursor: true,
+        keyboardControl: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
 
-      // If we need pagination
-      pagination: '.swiper-pagination',
+        // Lazy Loading
+        preloadImages: false,
+        lazyLoading: true,
 
-      // Navigation arrows
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
+        // If we need pagination
+        pagination: '.swiper-pagination',
+
+        // Navigation arrows
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+      });
+
     });
   }
 });
