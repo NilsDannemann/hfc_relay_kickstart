@@ -3,6 +3,7 @@
   margin-bottom: $whitespace;
   background: #fff;
   border: $border;
+  z-index: 0; //For: Slider overlapping navigation fix
 
   /* =======================================*/
   /* SWIPER SLIDER - NAVIGATION
