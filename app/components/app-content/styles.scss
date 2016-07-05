@@ -12,6 +12,7 @@
   .app-content-inner {
     @include column($behavior: stacking);
     padding: $whitespace;
+    width: 0; //For: Fixes Swiper Slider bug in content-inner
   }
 
   .app-content-aside {
