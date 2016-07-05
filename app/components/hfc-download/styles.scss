@@ -12,6 +12,7 @@
   .download-container-inner {
     @include flexbox();
     @include column();
+    width: inherit; //For: fix auto column bug
   }
 
   .download-title {

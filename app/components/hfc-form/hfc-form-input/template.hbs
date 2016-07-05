@@ -36,6 +36,14 @@
     </label>
   {{/if}}
 
+  {{!-- FILE UPLOADS --}}
+  {{#if (eq type "file")}}
+    <label class="hfc-form-label-file">
+      {{#if label}}<span>{{label}}</span>{{else}}<span>Label</span>{{/if}}
+      <input class="hfc-form-file" type="file" name="file" data-multiple-caption="{count} files selected" multiple/>
+    </label>
+  {{/if}}
+
 {{else}}
 
   Please specify an input type (e.g. type="text")

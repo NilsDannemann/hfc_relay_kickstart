@@ -33,4 +33,34 @@
   .hfc-form-radiobutton {
     @include radiobutton();
   }
+
+  // FILE
+  .hfc-form-label-file {
+    cursor: pointer;
+    span {
+      @include icon('fa-cloud-upload', $margin: 0 ($whitespace*0.5) 0 0);
+      display: inline-block;
+      padding: ($whitespace*0.5) 15px;
+      border: $border;
+      border-radius: $border-radius;
+    }
+    &:hover,
+    &.active {
+      span {
+        @include icon('fa-cloud-upload', $color: #fff, $margin: 0 ($whitespace*0.5) 0 0);
+        background: $color-brand;
+        border: 1px solid $color-brand;
+        color: #fff;
+      }
+    }
+    &.active {
+      span {
+        @include icon('fa-check', $color: #fff, $margin: 0 ($whitespace*0.5) 0 0);
+      }
+    }
+    * {pointer-events: none;} //For: Fixes fastclick issue
+  }
+  .hfc-form-file {
+    display: none;
+  }
 }
