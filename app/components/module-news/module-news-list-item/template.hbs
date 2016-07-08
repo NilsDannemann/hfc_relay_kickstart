@@ -1,0 +1,23 @@
+<section class="module-news-list-item-container">
+  {{!-- Title --}}
+  {{#link-to _link class="module-news-list-item-title"}}
+    <div class="module-news-list-item-date">{{_date}}</div>
+    {{_title}}
+  {{/link-to}}
+  {{!-- Image --}}
+  {{#link-to _link class="module-news-list-item-image" style=backgroundImage}}{{/link-to}}
+  <div class="module-news-list-item-container-inner">
+    {{!-- Content --}}
+    <p class="module-news-list-item-content">
+      {{!-- Meta --}}
+      <div class="module-news-list-item-meta">
+        <span>Ort</span> {{_place}}
+        <br>
+        <span>Zeit</span> {{_time}}
+      </div>
+      {{_content}}
+    </p>
+    {{!-- Link --}}
+    {{#link-to _link class="module-news-list-item-link"}}Weiterlesen{{/link-to}}
+  </div>
+</section>

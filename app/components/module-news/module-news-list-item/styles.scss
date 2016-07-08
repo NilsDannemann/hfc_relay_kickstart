@@ -1,0 +1,81 @@
+&{
+  @include column(1/1, $gutter: $whitespace);
+  @include respond-above(s) {@include column(1/2, $gutter: $whitespace);}
+  @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
+
+  .module-news-list-item-container {
+    @include flexbox($align: stretch);
+    box-shadow: $box-shadow;
+  }
+
+  .module-news-list-item-image{
+    @include column(1/1);
+    @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
+    @include respond-above(l) {@include column(1/2, $gutter: $whitespace);}
+    @include respond-above(xl) {@include column(1/5, $gutter: $whitespace);}
+    @include overlay();
+    margin-bottom: 0 !important;
+    min-height: 150px;
+    min-height: 15vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .module-news-list-item-title {
+    @include column(1/1);
+    font: bold $font-size-m $font-family-headline;
+    color: $color-headline;
+    padding: ($whitespace*0.75) $whitespace;
+    margin-bottom: 0;
+    border-bottom: 2px solid $color-brand;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .module-news-list-item-date {
+    color: #fff;
+    background: $color-brand;
+    display: inline-block;
+    font-weight: 500;
+    font-size: $font-size-s;
+    padding: ($whitespace*0.25) ($whitespace*0.5);
+    margin: 0 ($whitespace*0.5) 0 0;
+    // box-shadow: $box-shadow;
+    // position: absolute; //For: fix overlapping overlay
+  }
+
+  .module-news-list-item-container-inner {
+    @include flexbox($direction: column, $align: strech, $justify: start);
+    align-self: stretch;
+    @include column(1/1);
+    @include respond-above(l) {@include column();}
+  }
+
+  .module-news-list-item-content{
+    flex: 1;
+    padding: ($whitespace*0.75) $whitespace;
+    margin-bottom: 0;
+    font-size: $font-size-s;
+  }
+
+  .module-news-list-item-meta{
+    margin-bottom: ($whitespace*0.5);
+
+    span {
+      width: 40px;
+      color: #fff;
+      background: $color-brand;
+      font-weight: 500;
+      display: inline-block;
+      padding: ($whitespace*0.125) ($whitespace*0.25);
+      margin: 0 ($whitespace*0.125) ($whitespace*0.125) 0;
+    }
+  }
+  .module-news-list-item-link {
+    color: $color-headline;
+    padding: ($whitespace*0.75) $whitespace;
+    border-top: $border;
+  }
+}

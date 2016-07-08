@@ -12,6 +12,7 @@
   .app-content-inner {
     @include column($behavior: stacking);
     padding: $whitespace;
+    flex: 1 1 auto; //For: Fixes Swiper Slider bug in content-inner (Firefox)
     width: 0; //For: Fixes Swiper Slider bug in content-inner
   }
 

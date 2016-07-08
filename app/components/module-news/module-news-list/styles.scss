@@ -1,0 +1,13 @@
+& {
+  @include flexbox();
+
+  &:not(:last-child){
+    border-bottom: $border;
+    margin-bottom: ($whitespace*2);
+  }
+
+  .module-news-list-title {
+    @include column(1/1);
+    margin-bottom: ($whitespace);
+  }
+}
