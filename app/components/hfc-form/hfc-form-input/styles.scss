@@ -16,6 +16,7 @@
     border: $border;
     padding: ($whitespace*0.5) ($whitespace*0.5);
     outline: none;
+    -webkit-appearance: none; //For: Deacivate mobile Safari styles
   }
 
   // CHECKBOX
