@@ -43,6 +43,7 @@
     "ember-resolver": "^2.0.3",
     "ember-truth-helpers": "1.2.0",
     "hfc-relay": "^1.0.0",
+    "hfc-relay-grid": "^1.0.0",
     "loader.js": "^4.0.1"
   }
 }

@@ -3,16 +3,16 @@
 
   .download-container {
     @include flexbox();
-    @include column(1/1, $gutter: $whitespace);
-    @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
+    @include column('1/1', $gutter: $whitespace);
+    @include respond-above(m) {@include column('1/1', $gutter: $whitespace);}
     box-shadow: $box-shadow;
     border-left: 2px solid $color-brand;
   }
 
   .download-container-inner {
     @include flexbox();
-    @include column();
-    width: inherit; //For: fix auto column bug
+    @include column('auto');
+     width: inherit; //For: fix auto column 'bug'
   }
 
   .download-title {
@@ -43,7 +43,7 @@
   .download-controls{
     @include flexbox();
     @include respond-below(l) {
-      @include column(1/1);
+      @include column('1/1');
       border-top: $border;
     }
     align-self: stretch;

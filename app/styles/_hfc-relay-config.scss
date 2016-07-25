@@ -34,36 +34,10 @@ $color-brand        : $color-darkblue;
 $color-headline     : $color-black;
 $color-text         : lighten($color-black, 15%);
 
-
-/* =======================================*/
-/*
-/* LAYOUT
-/*
-/* =======================================*/
-
-// Globals
 $whitespace    : 20px;
 $width-sidebar : 325px;
-$breakpoints: (
-  'xs'  : 0px,
-  's'   : 485px,
-  'm'   : 650px,
-  'l'   : 800px,
-  'xl'  : 960px,
-  'xxl' : 1275px
-);
 
-// Experimental Features
-// Element Queries (needs testing)
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.1.0/EQCSS.min.js"></script>
-$use-elementqueries    : false;
 
-// Transition Everything (works, but not performant)
-$transition-everything : false;
-
-// Devmode (works)
-$devmode-overlay       : false;
-$devmode-breakpoints   : true;
 
 
 /* =======================================*/
@@ -126,6 +100,8 @@ $box-shadow-soft : 0px 0px 35px rgba(0, 0, 0, 0.05); //For: better highlight whi
 $box-shadow     : $box-shadow-s;
 
 // Transition
+$transition-everything : false;
+
 $transition-type-sine  : ease-out-sine;
 $transition-type-quad  : ease-out-quad;
 $transition-type-cubic : ease-out-cubic;

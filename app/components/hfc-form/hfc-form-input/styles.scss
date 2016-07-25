@@ -4,14 +4,14 @@
 
   // INPUT
   .hfc-form-label {
-    @include column(130px);
+    @include column('130px');
     color: $color-headline;
     font-family: $font-family-headline;
     font-weight: bold;
     margin-bottom: ($whitespace*0.5);
   }
   .hfc-form-input {
-    @include column();
+    @include column('auto');
     font-size: $font-size;
     border: $border;
     padding: ($whitespace*0.5) ($whitespace*0.5);

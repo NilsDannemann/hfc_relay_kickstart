@@ -1,14 +1,14 @@
 &{
   @include flexbox($align: stretch); // For: No-Img Fallback
-  @include column(1/1, $gutter: $whitespace);
-  @include respond-above(s) {@include column(1/2, $gutter: $whitespace);}
-  @include respond-above(m) {@include column(1/1, $gutter: $whitespace);}
-  @include respond-above(l) {@include column(1/2, $gutter: $whitespace);}
-  @include respond-above(xl) {@include column(1/3, $gutter: $whitespace);}
+  @include column('1/1', $gutter: $whitespace);
+  @include respond-above(s) {@include column('1/2', $gutter: $whitespace);}
+  @include respond-above(m) {@include column('1/1', $gutter: $whitespace);}
+  @include respond-above(l) {@include column('1/2', $gutter: $whitespace);}
+  @include respond-above(xl) {@include column('1/3', $gutter: $whitespace);}
 
   .teaser-container {
     @include flexbox($direction: column, $align: stretch); // For: No-Img Fallback
-    @include column(1/1); // For: Very short content (e.g. one word)
+    @include column('1/1'); // For: Very short content (e.g. one word)
     box-shadow: $box-shadow;
   }
 

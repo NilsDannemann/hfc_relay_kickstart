@@ -10,14 +10,14 @@
   }
 
   .app-content-inner {
-    @include column($behavior: stacking);
+    @include column('auto', $stacking: true);
     padding: $whitespace;
     flex: 1 1 auto; //For: Fixes Swiper Slider bug in content-inner (Firefox)
     width: 0; //For: Fixes Swiper Slider bug in content-inner
   }
 
   .app-content-aside {
-    @include column($width-sidebar, $behavior: stacking);
+    @include column('#{$width-sidebar}', $stacking: true);
     padding: $whitespace;
   }
 }

@@ -6,13 +6,13 @@
   }
 
   .hfc-content-title {
-    @include column(1/1);
+    @include column('1/1');
     margin-bottom: $whitespace;
   }
 
   .hfc-content-image {
-    @include column(1/1, $gutter: ($whitespace*2));
-    @include respond-above(xl) {@include column(1/3, $gutter: true);}
+    @include column('1/1', $gutter: ($whitespace*2));
+    @include respond-above(xl) {@include column('1/3', $gutter: true);}
     @include overlay($icon: 'fa-search');
     min-height: 125px;
     height: 25vh;
@@ -37,9 +37,9 @@
   }
 
   .hfc-content-content {
-    @include column(1/1);
+    @include column('1/1');
     @include respond-above(xl) {
-      @include column(2/3, $gutter: true);
+      @include column('2/3', $gutter: true);
     }
   }
 }
