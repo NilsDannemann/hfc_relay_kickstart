@@ -24,6 +24,7 @@ npm & bower install -->
 
     - Overwrite .ember-cli? (n)
     - Overwrite README.md? (Y)
+    - Overwrite app/app.js? (Y)
     - Overwrite app/index.html? (Y)
     - Overwrite app/router.js? (n)
     - Overwrite bower.json? (n)
