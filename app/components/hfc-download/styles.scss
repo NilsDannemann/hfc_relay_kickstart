@@ -41,7 +41,7 @@
   }
 
   .download-controls{
-    @include grid();
+    @include grid($justify: space-between);
     @include respond-below(l) {
       @include column('1/1');
       border-top: $border;
