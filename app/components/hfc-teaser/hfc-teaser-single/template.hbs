@@ -1,6 +1,8 @@
 <section class="teaser-container">
   {{!-- Image --}}
-  {{#link-to _link class="teaser-image" style=backgroundImage}}{{/link-to}}
+  {{#if image}}
+    {{#link-to _link class="teaser-image" style=backgroundImage}}{{/link-to}}
+  {{/if}}
   <div class="teaser-container-inner">
     {{!-- Title --}}
     {{#link-to _link class="teaser-title"}}{{_title}}{{/link-to}}
