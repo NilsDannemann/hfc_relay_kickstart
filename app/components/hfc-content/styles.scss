@@ -2,7 +2,7 @@
   &:not(:last-child) {margin-bottom: $whitespace;}
 
   .hfc-content-container {
-    @include flexbox();
+    @include grid();
   }
 
   .hfc-content-title {

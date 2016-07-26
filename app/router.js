@@ -6,7 +6,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('page-components');
   this.route('page-hfc-components', function() {
     this.route('page-hfc-teaser-single');
     this.route('page-hfc-teaser-double');

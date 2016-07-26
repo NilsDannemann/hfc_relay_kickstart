@@ -10,7 +10,7 @@
   /* =======================================*/
   .swiper-button-next,
   .swiper-button-prev {
-    @include flexbox($align: center, $justify: center);
+    @include grid($align: center, $justify: center);
     height: ($whitespace*3);
     width: ($whitespace*3);
     background-image: none; //For: override swiper defaults
@@ -30,7 +30,7 @@
   /* SWIPER SLIDER - PAGINATION
   /* =======================================*/
   .swiper-pagination {
-    @include flexbox($justify: center, $align: center);
+    @include grid($justify: center, $align: center);
     height: ($whitespace*3);
     bottom: 0;
   }

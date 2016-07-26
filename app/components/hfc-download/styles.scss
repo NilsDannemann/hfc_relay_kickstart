@@ -1,8 +1,8 @@
 &{
-  @include flexbox();
+  @include grid();
 
   .download-container {
-    @include flexbox();
+    @include grid();
     @include column('1/1', $gutter: $whitespace);
     @include respond-above(m) {@include column('1/1', $gutter: $whitespace);}
     box-shadow: $box-shadow;
@@ -10,13 +10,13 @@
   }
 
   .download-container-inner {
-    @include flexbox();
+    @include grid();
     @include column('auto');
      width: inherit; //For: fix auto column 'bug'
   }
 
   .download-title {
-    @include flexbox($align: center, $justify: start, $wrap: nowrap);
+    @include grid($align: center, $justify: start, $wrap: nowrap);
     padding: ($whitespace*0.75) $whitespace;
     margin-bottom: 0;
     white-space: nowrap;
@@ -41,7 +41,7 @@
   }
 
   .download-controls{
-    @include flexbox();
+    @include grid();
     @include respond-below(l) {
       @include column('1/1');
       border-top: $border;

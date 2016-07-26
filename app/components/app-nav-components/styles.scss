@@ -1,5 +1,5 @@
 & {
-  @include flexbox($align: stretch);
+  @include grid($align: stretch);
   border-top: $border;
   border-bottom: $border;
   margin-top: $whitespace;

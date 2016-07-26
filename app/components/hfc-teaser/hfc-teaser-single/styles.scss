@@ -4,7 +4,7 @@
   @include respond-above(m) {@include column('1/1', $gutter: $whitespace);}
 
   .teaser-container {
-    @include flexbox($align: stretch);
+    @include grid($align: stretch);
     box-shadow: $box-shadow;
   }
 
@@ -22,7 +22,7 @@
   }
 
   .teaser-container-inner {
-    @include flexbox($direction: column, $align: strech, $justify: start);
+    @include grid($direction: column, $align: strech, $justify: start);
     align-self: stretch;
     @include column('1/1');
     @include respond-above(l) {@include column('auto');}

@@ -2,7 +2,7 @@
 
   .nav-top-container {
     @include container();
-    @include flexbox($justify: flex-end, $align: center);
+    @include grid($justify: flex-end, $align: center);
   }
 
   .nav-top-item {

@@ -2,7 +2,7 @@
 
   .app-footer-container{
     @include container();
-    @include flexbox();
+    @include grid($justify: space-between);
     padding: $whitespace 0;
 
     @include respond-below(xxl) {margin: 0 $whitespace;}

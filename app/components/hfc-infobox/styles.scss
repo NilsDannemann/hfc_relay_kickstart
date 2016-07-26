@@ -1,7 +1,9 @@
 &{
   border: $border;
   padding: $whitespace;
-  margin-bottom: $whitespace;
+  &:not(:last-child){
+    margin-bottom: $whitespace;
+  }
 
   .hfc-infobox-title {
     border-bottom: $border;

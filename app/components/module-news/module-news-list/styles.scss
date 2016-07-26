@@ -1,5 +1,5 @@
 & {
-  @include flexbox();
+  @include grid();
 
   &:not(:last-child){
     border-bottom: $border;

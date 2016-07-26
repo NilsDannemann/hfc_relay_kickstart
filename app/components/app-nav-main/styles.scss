@@ -4,7 +4,7 @@
 
   .nav-main-container {
     @include container();
-    @include flexbox($justify: space-between, $align: center);
+    @include grid($justify: space-between, $align: center);
     @include respond-below(xxl) {padding-right: $whitespace; padding-left: $whitespace;}
   }
 

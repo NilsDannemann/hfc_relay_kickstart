@@ -1,5 +1,5 @@
 &{
-  @include flexbox($justify: flex-end);
+  @include grid($justify: flex-end);
 
   .hfc-form-submit {
     @include button();
