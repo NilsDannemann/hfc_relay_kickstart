@@ -6,16 +6,16 @@
   }
 
   .hfc-content-title {
-    @include column('1/1');
+    @include column('1/1', $gutter: true);
     margin-bottom: $whitespace;
   }
 
   .hfc-content-image {
     @include column('1/1', $gutter: ($whitespace*2));
-    @include respond-above(xl) {@include column('1/3', $gutter: true);}
+    @include respond-above(xl) {@include column('1/4', $gutter: true);}
     @include overlay($icon: 'fa-search');
     min-height: 125px;
-    height: 25vh;
+    height: 15vh;
     border: $border;
     box-shadow: 0px 0px 0px 5px white inset;
     background-repeat: no-repeat;
@@ -26,11 +26,12 @@
     &.hfc-content-image-right {
       @include respond-above(xl) {
         order: 2; // mobile fix
+        margin: 0 0 0 $whitespace;
       }
     }
 
     .hfc-content-image-subtitle {
-      @include position(absolute, $bottom: (-$whitespace*1.5), $left:0);
+      @include position(absolute, $bottom: (-$whitespace*1.25), $left:0);
       font-size: $font-size-s;
       color: darken($color-grey, 25%);
     }
@@ -39,7 +40,7 @@
   .hfc-content-content {
     @include column('1/1');
     @include respond-above(xl) {
-      @include column('2/3', $gutter: true);
+      @include column('auto', $gutter: true);
     }
   }
 }
