@@ -34,9 +34,7 @@
     padding: ($whitespace*0.75) $whitespace;
     margin-bottom: 0;
     border-bottom: 2px solid $color-brand;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    word-break: break-all; //For: Long words breaks columns fix
   }
 
   .teaser-content{
