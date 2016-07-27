@@ -2,8 +2,6 @@
   {{!-- Logo --}}
   {{app-logo}}
 
-  {{!-- Mobile Navigation Icon --}}
-  <div class="nav-main-mobile-icon {{if isOpen 'is-open'}}" {{action "toggleNavigation"}}></div>
 
   {{!-- Navigation --}}
   <ul id="nav-main" class="sm nav-main-theme {{if isOpen 'is-open'}}">
@@ -11,6 +9,9 @@
     <li>{{#link-to 'page-news'}}News{{/link-to}}</li>
     <li>{{#link-to 'page-contact'}}Contact{{/link-to}}</li>
   </ul>
+
+  {{!-- Mobile Navigation Icon --}}
+  <div class="nav-main-mobile-icon {{if isOpen 'is-open'}}" {{action "toggleNavigation"}}></div>
 </nav>
 
 {{!-- Mobile Navigation Dimmer --}}
