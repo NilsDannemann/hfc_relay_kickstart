@@ -16,26 +16,16 @@ npm & bower install -->
 ####2. Rename Project<br> 
 - Rename Folder <br> 
 
-- Change Project Name in package.json & bower.json<br> 
-`"name": "my-project"`
+- Find & Replace all Instances of "hfc-relay-kickstart" to "your-projectname"<br> 
 
-- Update Project<br> 
-`ember init`
+- Run `npm install`
 
-    - Overwrite .ember-cli? (n)
-    - Overwrite README.md? (Y)
-    - Overwrite app/app.js? (Y)
-    - Overwrite app/index.html? (Y)
-    - Overwrite app/router.js? (n)
-    - Overwrite bower.json? (n)
-    - Overwrite config/environment.js? (Y)
-    - Overwrite ember-cli-build.js? (n)
-    - Overwrite package.json? (n)
-    - Overwrite tests/index.html? (Y)
+- Run `bower install`
 
+- Run `ember s`
 
 ####3. Start Working<br> 
-ember s
+Happy coding! :-)
 
 
 
