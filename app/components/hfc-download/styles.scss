@@ -4,15 +4,13 @@
   .download-container {
     @include grid();
     @include column('1/1', $gutter: $whitespace);
-    @include respond-above(m) {@include column('1/1', $gutter: $whitespace);}
     box-shadow: $box-shadow;
     border-left: 2px solid $color-brand;
   }
 
   .download-container-inner {
     @include grid();
-    @include column('auto');
-     width: inherit; //For: fix auto column 'bug'
+    @include column('auto', $stacking: true);
   }
 
   .download-title {
@@ -42,7 +40,7 @@
 
   .download-controls{
     @include grid($justify: space-between);
-    @include respond-below(l) {
+    @include respond-below(xl) {
       @include column('1/1');
       border-top: $border;
     }
@@ -56,7 +54,7 @@
   }
   .download-size{
     color: darken($color-grey, 25%);
-    @include respond-below(l) {border: 0;}
+    @include respond-below(xl) {border: 0;}
   }
   .download-link{
     @include overlay($icon: 'fa-download', $icon-width: s, $icon-height: s);
