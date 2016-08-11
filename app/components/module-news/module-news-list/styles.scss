@@ -7,6 +7,7 @@
   }
 
   .module-news-list-title {
+    width: 100%; //For: Headlines break layout on mobile
     margin-bottom: $whitespace;
   }
 }

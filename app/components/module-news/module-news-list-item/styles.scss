@@ -1,7 +1,5 @@
 &{
   @include column('1/1', $gutter: $whitespace);
-  @include respond-above(s) {@include column('1/2', $gutter: $whitespace);}
-  @include respond-above(m) {@include column('1/1', $gutter: $whitespace);}
 
   .module-news-list-item-container {
     @include grid($align: stretch);
@@ -10,8 +8,7 @@
 
   .module-news-list-item-image{
     @include column('1/1');
-    @include respond-above(m) {@include column('1/1');}
-    @include respond-above(l) {@include column('1/2');}
+    @include respond-above(m) {@include column('1/3');}
     @include respond-above(xl) {@include column('1/5');}
     @include overlay();
     margin-bottom: 0 !important;

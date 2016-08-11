@@ -3,6 +3,10 @@
   padding-bottom: $whitespace;
   margin-bottom: $whitespace;
 
+  @include respond-below(m) {
+    display: none;
+  }
+
   .app-breadcrumb-link {
     color: $color-text;
 

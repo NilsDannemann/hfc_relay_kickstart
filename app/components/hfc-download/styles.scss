@@ -27,7 +27,7 @@
       font-family: $font-family-text;
       padding: ($whitespace*0.25) ($whitespace*0.5);
       margin-right: ($whitespace*0.5);
-      background: darken($color-brand, 7%);
+      background: $color-brand;
     }
   }
 
