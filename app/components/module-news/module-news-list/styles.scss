@@ -7,7 +7,6 @@
   }
 
   .module-news-list-title {
-    @include column('1/1');
-    margin-bottom: ($whitespace);
+    margin-bottom: $whitespace;
   }
 }
