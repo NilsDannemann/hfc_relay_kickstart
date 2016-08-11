@@ -7,12 +7,7 @@
     color: $color-text;
 
     &:not(:last-child) {
-      &:after {
-        content: '\f105';
-        font-family: FontAwesome;
-        color: $color-grey;
-        padding: 0 ($whitespace*0.5);
-      }
+      @include icon('fa-caret-right', $position: after, $margin: 0 10px);
     }
 
     &:last-child {}

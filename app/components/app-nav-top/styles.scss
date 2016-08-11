@@ -6,11 +6,12 @@
   }
 
   .nav-top-item {
+    color: $color-text;
     padding: ($whitespace*0.75) $whitespace;
 
     &:hover,
     &.active {
-      background: $color-grey;
+      color: $color-brand;
     }
   }
 }
